@@ -272,5 +272,12 @@ const correctPassword = 'game123';
                 }
             });
         }
+  document.addEventListener('keydown', function(event) {
+            // Check if Ctrl+U is pressed
+            if (event.ctrlKey && event.key === 'u') {
+                event.preventDefault(); // Prevent the default browser action
+                alert('You thought you could get away with hacking');
+            }
+        });
 
 </script>
