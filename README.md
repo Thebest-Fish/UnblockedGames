@@ -27,6 +27,9 @@ step 7 open up folder and double click the `fileName.html`
 
 <h1>If you have a Proxy</h1>
 
-step 1 go to the `Right` of your screen and click github pages.
+step 1 go to the `Right` of your screen and go under `Deploy` click github pages.
+```
+www.psdchools.org
+```
 
 step 2 `copy` the link and `paste` it into your `proxy`
