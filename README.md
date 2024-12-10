@@ -32,5 +32,6 @@ step 1 `copy` this link
 ```
 https://thebest-fish.github.io/UnblockedGames/
 ```
+This link is blocked so you need to use a proxy
 
 step 2 `paste` this into the `proxy`
