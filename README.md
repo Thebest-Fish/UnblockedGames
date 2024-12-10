@@ -24,3 +24,9 @@ step 6 save `.txt` as `.html`
   
 step 7 open up folder and double click the `fileName.html`
 <div>Now that has created a finished website</div>
+
+<h1>If you have a Proxy</h1>
+
+step 1 go to the `Right` of your screen and click github pages.
+
+step 2 `copy` the link and `paste` it into your `proxy`
