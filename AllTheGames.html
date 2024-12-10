@@ -328,7 +328,7 @@ const correctPassword = atob('Z2FtZTEyMw==');
             xhr.open("POST", scriptURL, true);
             xhr.onload = function() {
                 if (xhr.status == 200) {
-                    document.getElementById("responseMessage").innerText = alert('Submitted');
+               alert('Submitted');
                 } else {
                     document.getElementById("responseMessage").innerText = "Error submitting data.";
                 }
