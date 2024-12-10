@@ -27,6 +27,7 @@ From Kinard Administration
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,11 +72,19 @@ From Kinard Administration
 <h1>.</h1>
 <h1>.</h1>
 <p>.</p>
-        <p>.</p>
+      <p>.</p>
       <div><h1>Made By: Ashvath Gupta</h1></div>
        <div class="search-container">
             <input type="text" id="searchInput" class="password-input" placeholder="Search for a game..." oninput="searchItems()">
         </div>
+      
+    <form id="dataForm">
+        <label for="inputData">Application: </label><br><br>
+        <input type="text" id="searchInput" name="inputData" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="responseMessage"></p>
       <h2 class="list-item">Multiplay Games</h2>
       <div class="list-item"><a href="https://rubyarcade.lol/" target="blank">Ruby Arcade</a></div>
       <div class="list-item"><a href="https://sites.google.com/view/ts-allinone/home" target="blank">Toni Games</a></div>
@@ -146,7 +155,6 @@ From Kinard Administration
       <div class="list-item"><a href="https://flappycreator.com/flappy.php?id=5f3c49bc07f94" target="blank">Flappy Game</a></div>
       <div class="list-item"><a href="https://hackertyper.net/" target="blank">Hacker Typer(If you really want to hack come to me)</a></div>
       <div class="list-item"><a href="https://openprocessing.org/sketch/1209711/" target="blank">3 Days till Mario steals your life</a></div>
-    <div class="list-item"><a href="https://doodles.google/" target="blank">Google Doodles</a></div>
       <div class="info">
         <h2>Contact:</h2>
         <p>Email: 96654@psdschools.org
@@ -310,5 +318,23 @@ const correctPassword = atob('Z2FtZTEyMw==');
                 alert('You thought you could get away with hacking');
             }
         });
+   document.getElementById("dataForm").addEventListener("submit", function(event) {
+            event.preventDefault();
 
+            var formData = new FormData(this);
+            var xhr = new XMLHttpRequest();
+            var scriptURL = "https://script.google.com/macros/s/AKfycbxJtY2iGjMtlzy4_XIYNeINGpUc4l_EF35PNca86B3VAWFrH4ypZmYwys8EIQZqewupag/exec"; // Replace with your Apps Script URL
+
+            xhr.open("POST", scriptURL, true);
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    document.getElementById("responseMessage").innerText = "Data submitted successfully!";
+                } else {
+                    document.getElementById("responseMessage").innerText = "Error submitting data.";
+                }
+            };
+            xhr.send(formData);
+        });
+  
+  
 </script>
