@@ -12,7 +12,7 @@ step 2 click the `download raw folder` from the top right corner of the code
 
 step 1 take code from `AllTheGames.html`
 
-step 2 Open `terminal/bash` and make a new folder in Desktop use `C:Path/to/your/Desktop> mikdr folderName`
+step 2 Open `terminal/bash` and make a new folder in Desktop use ```C:Path/to/your/Desktop> mikdr folderName```
 
 step 3 open folder and make new `.txt`
 
@@ -27,9 +27,4 @@ step 7 open up folder and double click the `fileName.html`
 
 <h1>If you have a Proxy</h1>
 
-step 1 go to the `Right` of your screen and go under `Deploy` click github pages.
-```
-www.psdchools.org
-```
-
-step 2 `copy` the link and `paste` it into your `proxy`
+step 1 `copy` this link ``` ```
