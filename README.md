@@ -27,4 +27,6 @@ step 7 open up folder and double click the `fileName.html`
 
 <h1>If you have a Proxy</h1>
 
-step 1 `copy` this link ``` ```
+step 1 `copy` this link ```https://thebest-fish.github.io/UnblockedGames/```
+
+step 2 `paste` this into the `proxy`
