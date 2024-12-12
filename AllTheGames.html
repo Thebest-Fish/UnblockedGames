@@ -31,17 +31,16 @@ From Kinard Administration
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="shortcut icon" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAApVBMVEXoFjHoGDPnIDr609f62Nv73eD74uTyiJT56Or0m6bkFS/68fNlYqtdWqelocztZHXU0uZRTaCUkML0qLFua7BAPZh+fLdYVaOsqtHZEyz1x8zu7fSMicDh3+xAPpjeKT/+/v2HhL3VEipHRZvm5O/od4XRESjQIDSysNPbPk/MESbYQ1PIDyTTS1rEDiPttrzabXjHIjW5DR/CwNu2DB7orbPQXmoCxtEDAAAArklEQVR4ASyMNUIEURAF6/X44C4x9z8LKTlu6/Z1tdpVAMpsEWSEaQNyVoE0V7/strWvt14LSqAV0U+vsslDeXYmOfrxo8hxWpzpgTq4LpVhdbzKQNkR6ahc22h16QqsLNshCwt+VN7M+3IDEfDHnM0xE6WxbRSfnMRucp63jQa62ZOWf4Bh8HZTceCloCwZd4k98WZbk5eRczgarIDtj9sRfFzrGfi+Na1nwoAKAB2JO8UcczD2AAAAAElFTkSuQmCC">
+   <link rel="shortcut icon" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAApVBMVEXoFjHoGDPnIDr609f62Nv73eD74uTyiJT56Or0m6bkFS/68fNlYqtdWqelocztZHXU0uZRTaCUkML0qLFua7BAPZh+fLdYVaOsqtHZEyz1x8zu7fSMicDh3+xAPpjeKT/+/v2HhL3VEipHRZvm5O/od4XRESjQIDSysNPbPk/MESbYQ1PIDyTTS1rEDiPttrzabXjHIjW5DR/CwNu2DB7orbPQXmoCxtEDAAAArklEQVR4ASyMNUIEURAF6/X44C4x9z8LKTlu6/Z1tdpVAMpsEWSEaQNyVoE0V7/strWvt14LSqAV0U+vsslDeXYmOfrxo8hxWpzpgTq4LpVhdbzKQNkR6ahc22h16QqsLNshCwt+VN7M+3IDEfDHnM0xE6WxbRSfnMRucp63jQa62ZOWf4Bh8HZTceCloCwZd4k98WZbk5eRczgarIDtj9sRfFzrGfi+Na1nwoAKAB2JO8UcczD2AAAAAElFTkSuQmCC">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Kinard Core Knowledge Middle School</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
   
-
-.work-sans-<uniquifier> {
+      .work-sans-<uniquifier> {
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 10;
@@ -150,17 +149,74 @@ background-color: transparent;
 text-decoration: underline;
   
 }
+
+        /* Navigation Bar */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #333;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li button {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav ul li button:hover {
+            background-color: #555;
+        }
+
+        /* Section Styling */
+        main section {
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: none;
+        }
+
+        main section.active {
+            display: block;
+        }
+
+        
+        html {
+            scroll-behavior: smooth;
+        }
       
+      li {
+        text-align: left;
+}
     </style>
 </head>
 <body>
-    <div class="container" id="passwordContainer">
+  <div class="container" id="passwordContainer">
         <h2>Password Protected Page</h2>
         <input type="password" id="password" class="password-input" placeholder="Enter password">
         <button class="button" onclick="checkPassword()">Submit</button>
     </div>
     <div class="content hidden" id="protectedContent">
-          <div><h1>Made By: Ashvath Gupta</h1></div>
+    <nav>
+        <ul>
+            <li><button onclick="showTab('about')">Games</button></li>
+            <li><button onclick="showTab('contact')">Contact</button></li>
+            <li><button onclick="showTab('place')">Application</button></li>
+           <li><button onclick="showTab('person')">People</button></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about" class="active">
+             <div><h1>Made By: Ashvath Gupta</h1></div>
       <div class="search-container">
     <input type="text" id="gameSearchInput" class="password-input" placeholder="Search for a game..." oninput="searchItems()">
 </div>
@@ -168,11 +224,6 @@ text-decoration: underline;
        <div class="mode-toggle">
         <button class="button" onclick="toggleMode()">Toggle Light/Dark Mode</button>
     </div>
-    <form id="dataForm">
-        <label for="inputData">Application for admin or higher: </label><br><br>
-        <input type="text" id="searchInput" name="inputData" class="password-input" required placeholder="Enter Name then Apply..."><br><br>
-        <button type="submit" class="button">Submit Application</button>
-    </form>
 
     <p id="responseMessage"></p>
        <h2>Multiplay Games</h2>
@@ -249,8 +300,50 @@ text-decoration: underline;
       <div class="list-item"><a href="https://openprocessing.org/sketch/1209711/" target="blank">3 Days till Mario steals your life</a></div>
     <div class="list-item"><a href="https://a1rplayis.us/games" target="blank">a1r games</a></div>
     </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: 96654@psdschools.org</p>
+            <p>Phone: +1 970-294-8772</p>
+        </section>
+        <section id="place">
+           <form id="dataForm">
+        <label for="inputData">Application for admin or higher: </label><br><br>
+        <input type="text" id="searchInput" name="inputData" class="password-input" required placeholder="Enter Name then Apply..."><br><br>
+        <button type="submit" class="button">Submit Application</button>
+    </form>
+        </section>
+      <section id="person">
+        <ul>
+          <li>Owner: Andre</li>
+          <li>Web Dev: Ashvath</li>
+          <h3>Admin</h3>
+          <li>Easton</li>
+          <li>Harrison</li>
+          <li>Yilin</li>
+          <h3>Mod</h3>
+          <li>Conner</li>
+          <h3>Editors</h3>
+          <li>Bradley</li>
+        </ul>
+      </section>
+  </div>
+    </main>
     <script>
-        function checkPassword() {
+        function showTab(tabId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected tab
+            const targetSection = document.getElementById(tabId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+        }
+      function checkPassword() {
             const password = document.getElementById('password').value;
             const correctPassword = atob('Z2FtZTEyMw=='); // Replace this with your desired password
             const content = document.getElementById('protectedContent');
