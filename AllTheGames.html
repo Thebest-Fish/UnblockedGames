@@ -35,29 +35,43 @@ From Kinard Administration
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Kinard Core Knowledge Middle School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
+  
+
+.work-sans-<uniquifier> {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 10;
+  font-style: normal;
+}
         :root {
-            --background-color: #f0f0f0;
-            --text-color: #000;
-            --container-background-color: #fff;
-            --button-background-color: #007bff;
-            --button-hover-background-color: #0056b3;
+           --background-color: #121212;
+            --text-color: #fff;
+            --container-background-color: #1e1e1e;
+            --button-background-color: #bd45459a;
+            --button-hover-background-color:  #bd45459a;
         }
 
         [data-theme="dark"] {
-            --background-color: #121212;
-            --text-color: #fff;
-            --container-background-color: #1e1e1e;
-            --button-background-color: #bb86fc;
-            --button-hover-background-color: #3700b3;
+           --background-color: #f0f0f0;
+            --text-color: #000;
+            --container-background-color: #fff;
+            --button-background-color: #bd45459a;
+            --button-hover-background-color:  #bd45459a;
         }
 
         body {
-            font-family: Arial, sans-serif;
+         font-family: work Sans;
+
+
             margin: 0;
             padding: 0;
             background-color: var(--background-color);
             color: var(--text-color);
+          text-align: center;
         }
 
         .container {
@@ -65,8 +79,8 @@ From Kinard Administration
             margin: 100px auto;
             padding: 20px;
             background-color: var(--container-background-color);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+              box-shadow: 0 0 100px rgba(211, 48, 48, 0.593);
         }
 
         h2 {
@@ -79,6 +93,9 @@ From Kinard Administration
             margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 4px;
+          background-color: var(--background-color);
+          color: var(--text-color);
+          box-shadow: 0 0 10px rgba(211, 48, 48, 0.593)
         }
 
         .button {
@@ -92,6 +109,8 @@ From Kinard Administration
 
         .button:hover {
             background-color: var(--button-hover-background-color);
+          transform: scale(1.2);
+          transition: transform 0.3s ease-in-out;
         }
 
         .hidden {
@@ -110,20 +129,26 @@ From Kinard Administration
             cursor: pointer;
         }
       
-
-a:hover {
-    color: var(--link-hover-color);
-  text-align: center;
+a:link, a:visited {
+color: var(--link-hover-color);
+background-color: transparent;
+text-decoration: underline;
+transition: text-shadow 0.3s ease-in-out; 
+ 
 }
 
-a:visited {
-    color: var(--link-visited-color);
-   text-align: center;
+a:hover {
+color: var(--link-hover-color);
+background-color: transparent;
+text-decoration: underline;
+text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red; 
 }
 
 a:active {
-    color: var(--link-active-color);
-   text-align: center;
+color: var(--link-hover-color);
+background-color: transparent;
+text-decoration: underline;
+  
 }
       
     </style>
@@ -136,20 +161,21 @@ a:active {
     </div>
     <div class="content hidden" id="protectedContent">
           <div><h1>Made By: Ashvath Gupta</h1></div>
-       <div class="search-container">
-            <input type="text" id="searchInput" class="password-input" placeholder="Search for a game..." oninput="searchItems()">
-        </div>
+      <div class="search-container">
+    <input type="text" id="gameSearchInput" class="password-input" placeholder="Search for a game..." oninput="searchItems()">
+</div>
+
        <div class="mode-toggle">
         <button class="button" onclick="toggleMode()">Toggle Light/Dark Mode</button>
     </div>
     <form id="dataForm">
         <label for="inputData">Application for admin or higher: </label><br><br>
-        <input type="text" id="searchInput" name="inputData" class="password-input" required placeholder="Apply here..."><br><br>
+        <input type="text" id="searchInput" name="inputData" class="password-input" required placeholder="Enter Name then Apply..."><br><br>
         <button type="submit" class="button">Submit Application</button>
     </form>
 
     <p id="responseMessage"></p>
-       <h2 class="list-item">Multiplay Games</h2>
+       <h2>Multiplay Games</h2>
       <div class="list-item"><a href="https://rubyarcade.lol/" target="blank">Ruby Arcade</a></div>
       <div class="list-item"><a href="https://sites.google.com/view/ts-allinone/home" target="blank">Toni Games</a></div>
       <div class="list-item"><a href="https://superpopskrrtboother.wixsite.com/boother" target="blank">Super Pop Games</a></div>
@@ -196,7 +222,7 @@ a:active {
       <div class="list-item"><a href="https://www.primarygames.co.uk/" target="blank">Primary Games</a></div>
       <div class="list-item"><a href="https://paveldogreat.github.io/WebGL-Fluid-Simulation/" target="blank">WebGl Fluid Simulation</a></div>
       <div class="list-item"><a href="https://www.mathplayground.com/logic-games.html" target="blank">Math PlayGround</a></div>
-      <h2 class="list-item">Single Play</h2>
+      <h2>Single Play</h2>
       <div class="list-item"><a href="https://www.experimonkey.com/games/html5-games/cut-the-rope/" target="blank">Cut the Rope</a></div>
       <div class="list-item"><a href="https://www.google.com/search?q=google+snake+game&safe=active&ssui=on" target="blank">Snake Games</a></div>
       <div class="list-item"><a href="https://shawneestatechronicle.com/games/dinosaur-game/" target="blank">DinoSaur Game</a></div>
@@ -246,17 +272,18 @@ a:active {
         document.documentElement.setAttribute('data-theme', 'light');
       
       function searchItems() {
-            const searchInput = document.getElementById('searchInput').value.toLowerCase();
-            const items = document.querySelectorAll('.list-item');
+    const searchInput = document.getElementById('gameSearchInput').value.toLowerCase(); // Changed ID to gameSearchInput
+    const items = document.querySelectorAll('.list-item');
 
-            items.forEach(item => {
-                if (item.textContent.toLowerCase().includes(searchInput)) {
-                    item.classList.remove('hidden');
-                } else {
-                    item.classList.add('hidden');
-                }
-            });
+    items.forEach(item => {
+        if (item.textContent.toLowerCase().includes(searchInput)) {
+            item.classList.remove('hidden');
+        } else {
+            item.classList.add('hidden');
         }
+    });
+}
+
       
        document.addEventListener('keydown', function(event) {
             // Check if Ctrl+U is pressed
@@ -270,8 +297,7 @@ a:active {
 
             var formData = new FormData(this);
             var xhr = new XMLHttpRequest();
-            var scriptURL = "https://script.google.com/macros/s/AKfycbxJtY2iGjMtlzy4_XIYNeINGpUc4l_EF35PNca86B3VAWFrH4ypZmYwys8EIQZqewupag/exec"; // Replace with your Apps Script URL
-
+            var scriptURL = "https://script.google.com/macros/s/AKfycbxJtY2iGjMtlzy4_XIYNeINGpUc4l_EF35PNca86B3VAWFrH4ypZmYwys8EIQZqewupag/exec"; 
             xhr.open("POST", scriptURL, true);
             xhr.onload = function() {
                 if (xhr.status == 200) {
