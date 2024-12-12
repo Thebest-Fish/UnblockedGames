@@ -4,7 +4,7 @@
 
 CopyWright 2024 by Ashvath Gupta
 
-Any copying and pasting of this code is hereby declare illegal and can only be done after emailing or texting me
+Any copying and pasting of this code is declared illegal and can only be done after emailing or texting me
 
 From Kinard Administration
 
@@ -31,66 +31,125 @@ From Kinard Administration
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="shortcut icon" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAApVBMVEXoFjHoGDPnIDr609f62Nv73eD74uTyiJT56Or0m6bkFS/68fNlYqtdWqelocztZHXU0uZRTaCUkML0qLFua7BAPZh+fLdYVaOsqtHZEyz1x8zu7fSMicDh3+xAPpjeKT/+/v2HhL3VEipHRZvm5O/od4XRESjQIDSysNPbPk/MESbYQ1PIDyTTS1rEDiPttrzabXjHIjW5DR/CwNu2DB7orbPQXmoCxtEDAAAArklEQVR4ASyMNUIEURAF6/X44C4x9z8LKTlu6/Z1tdpVAMpsEWSEaQNyVoE0V7/strWvt14LSqAV0U+vsslDeXYmOfrxo8hxWpzpgTq4LpVhdbzKQNkR6ahc22h16QqsLNshCwt+VN7M+3IDEfDHnM0xE6WxbRSfnMRucp63jQa62ZOWf4Bh8HZTceCloCwZd4k98WZbk5eRczgarIDtj9sRfFzrGfi+Na1nwoAKAB2JO8UcczD2AAAAAElFTkSuQmCC">
+    <link rel="shortcut icon" sizes="16x16" href="data:image/png;base64,...">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Kinard Core Knowledge Middle School</title>
+    <style>
+        :root {
+            --background-color: #f0f0f0;
+            --text-color: #000;
+            --container-background-color: #fff;
+            --button-background-color: #007bff;
+            --button-hover-background-color: #0056b3;
+        }
+
+        [data-theme="dark"] {
+            --background-color: #121212;
+            --text-color: #fff;
+            --container-background-color: #1e1e1e;
+            --button-background-color: #bb86fc;
+            --button-hover-background-color: #3700b3;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: var(--container-background-color);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .password-input {
+            width: calc(100% - 24px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: var(--button-background-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: var(--button-hover-background-color);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .content {
+            margin: 20px;
+            padding: 10px;
+            background-color: var(--container-background-color);
+            border-radius: 4px;
+        }
+
+        .mode-toggle {
+            margin: 20px;
+            cursor: pointer;
+        }
+      
+
+a:hover {
+    color: var(--link-hover-color);
+  text-align: center;
+}
+
+a:visited {
+    color: var(--link-visited-color);
+   text-align: center;
+}
+
+a:active {
+    color: var(--link-active-color);
+   text-align: center;
+}
+      
+    </style>
 </head>
 <body>
-<html>
     <div class="container" id="passwordContainer">
         <h2>Password Protected Page</h2>
         <input type="password" id="password" class="password-input" placeholder="Enter password">
         <button class="button" onclick="checkPassword()">Submit</button>
     </div>
-    <div class="content" id="protectedContent">
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<h1>.</h1>
-<p>.</p>
-        <p>.</p>
-      <p>.</p>
-      <p>.</p>
-        <p>.</p>
-      <p>.</p>
-     
-      <div><h1>Made By: Ashvath Gupta</h1></div>
+    <div class="content hidden" id="protectedContent">
+          <div><h1>Made By: Ashvath Gupta</h1></div>
        <div class="search-container">
             <input type="text" id="searchInput" class="password-input" placeholder="Search for a game..." oninput="searchItems()">
         </div>
-      
+       <div class="mode-toggle">
+        <button class="button" onclick="toggleMode()">Toggle Light/Dark Mode</button>
+    </div>
     <form id="dataForm">
-        <label for="inputData">Application: </label><br><br>
+        <label for="inputData">Application for admin or higher: </label><br><br>
         <input type="text" id="searchInput" name="inputData" class="password-input" required placeholder="Apply here..."><br><br>
         <button type="submit" class="button">Submit Application</button>
     </form>
 
     <p id="responseMessage"></p>
-      <h2 class="list-item">Multiplay Games</h2>
+       <h2 class="list-item">Multiplay Games</h2>
       <div class="list-item"><a href="https://rubyarcade.lol/" target="blank">Ruby Arcade</a></div>
       <div class="list-item"><a href="https://sites.google.com/view/ts-allinone/home" target="blank">Toni Games</a></div>
       <div class="list-item"><a href="https://superpopskrrtboother.wixsite.com/boother" target="blank">Super Pop Games</a></div>
@@ -161,150 +220,32 @@ From Kinard Administration
       <div class="list-item"><a href="https://hackertyper.net/" target="blank">Hacker Typer(If you really want to hack come to me)</a></div>
       <div class="list-item"><a href="https://openprocessing.org/sketch/1209711/" target="blank">3 Days till Mario steals your life</a></div>
     <div class="list-item"><a href="https://a1rplayis.us/games" target="blank">a1r games</a></div>
-      <div class="info">
-        <h2>Contact:</h2>
-        <p>Email: 96654@psdschools.org
-            <div>Phone: 970-294-8772</div>
-        </p>
-      </div>
-  </div>
-      </html>
-</body>
-
-<style>
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #302f2f;
-    color: white;
-}
-
-.container {
-    text-align: center;
-    padding: 20px;
-    background-color: #413c3c;
-    box-shadow: 0 0 10px rgba(211, 48, 48, 0.593);
-    width: 300px;
-    border-radius: 8px;
-}
-
-.password-input {
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    margin-bottom: 15px;
-  margin-left: -10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-background-color: #413c3c;
-color: white;
-}
-
-.search-bar {
- padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    margin-bottom: 15px;
-  margin-left: -10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-background-color: #413c3c;
-color: white;
-}
-
-.button {
-    padding: 10px;
-    font-size: 16px;
-    background-color: #bd45459a;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-}
-
-.button:hover {
-    background-color: #9c3737;
-}
-
-.content {
-    display: none; /* Hidden by default */
-    padding: 20px;
-    background-color: #515151;
-    box-shadow: 0 0 10px rgba(211, 48, 48, 0.593);
-    box-shadow: none;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.info {
-    background-color: navy;
-    text-align: center;
-    border-radius: 5px;
-}
-.hidden {
-    display: none;
-}
-
-a:link, a:visited {
-color: white;
-background-color: transparent;
-text-decoration: underline;
-transition: text-shadow 0.3s ease-in-out; /* Smooth transition */
-}
-
-a:hover {
-color: white;
-background-color: transparent;
-text-decoration: underline;
-text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red; /* Glowing red effect */
-}
-
-a:active {
-color: white;
-background-color: transparent;
-text-decoration: underline;
-}
-
-.hover-text {
-    transition: transform 0.3s ease-in-out;
-    display: inline-block;
-}
-
-.hover-text:hover {
-    transform: translateY(-10px);
-}
-
-h2 {
-    color: white;
-}
-
-.list-item {
-    margin: 10px 0;
-}
-
-</style>
-<script>
-const correctPassword = atob('Z2FtZTEyMw==');
-
+    </div>
+    <script>
         function checkPassword() {
-            const enteredPassword = document.getElementById('password').value;
-            const protectedContent = document.getElementById('protectedContent');
-            const passwordContainer = document.getElementById('passwordContainer');
+            const password = document.getElementById('password').value;
+            const correctPassword = atob('Z2FtZTEyMw=='); // Replace this with your desired password
+            const content = document.getElementById('protectedContent');
+            const container = document.getElementById('passwordContainer');
 
-            if (enteredPassword === correctPassword) {
-                passwordContainer.style.display = 'none'; 
-                protectedContent.style.display = 'block';
+            if (password === correctPassword) {
+                container.classList.add('hidden');
+                content.classList.remove('hidden');
             } else {
-                alert('Now tracking current IP Address.');
+                alert("Incorrect password. Please try again.");
             }
         }
 
-        function searchItems() {
+        function toggleMode() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+        }
+
+        // Set default theme
+        document.documentElement.setAttribute('data-theme', 'light');
+      
+      function searchItems() {
             const searchInput = document.getElementById('searchInput').value.toLowerCase();
             const items = document.querySelectorAll('.list-item');
 
@@ -316,14 +257,15 @@ const correctPassword = atob('Z2FtZTEyMw==');
                 }
             });
         }
-  document.addEventListener('keydown', function(event) {
+      
+       document.addEventListener('keydown', function(event) {
             // Check if Ctrl+U is pressed
             if (event.ctrlKey && event.key === 'u') {
                 event.preventDefault(); // Prevent the default browser action
                 alert('You thought you could get away with hacking');
             }
         });
-   document.getElementById("dataForm").addEventListener("submit", function(event) {
+         document.getElementById("dataForm").addEventListener("submit", function(event) {
             event.preventDefault();
 
             var formData = new FormData(this);
@@ -340,6 +282,6 @@ const correctPassword = atob('Z2FtZTEyMw==');
             };
             xhr.send(formData);
         });
-  
-  
-</script>
+    </script>
+</body>
+</html>
