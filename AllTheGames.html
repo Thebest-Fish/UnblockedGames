@@ -53,6 +53,8 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
             --container-background-color: #1e1e1e;
             --button-background-color: #bd45459a;
             --button-hover-background-color:  #bd45459a;
+            --selection-color: black;
+            --selection-color-background: white;
         }
 
         [data-theme="dark"] {
@@ -61,6 +63,8 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
             --container-background-color: #fff;
             --button-background-color: #bd45459a;
             --button-hover-background-color:  #bd45459a;
+            --selection-color: white;
+            --selection-color-background: black;
         }
 
         body {
@@ -73,6 +77,10 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
             color: var(--text-color);
           text-align: center;
         }
+ ::selection {
+      background-color: var(--selection-color-background); 
+      color: var( --selection-color); 
+    }
 
         .container {
             max-width: 600px;
