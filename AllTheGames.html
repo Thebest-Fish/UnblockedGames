@@ -53,6 +53,9 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
       --input-border-radius: 6px;
       --shadow-color: rgba(211, 48, 48, 0.593);
       --link-color: white;
+      --scroll-bar-background: #bd45459a;
+      --scroll-bar: #121212;
+      --scroll-bar-hover: #bd45459a;
     }
 
     [data-theme="light"] {
@@ -65,6 +68,9 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
       --selection-color-background: black;
       --shadow-color: rgba(0, 0, 0, 0.2);
       --link-color: black;
+      --scroll-bar-background: white;
+      --scroll-bar: black;
+      --scroll-bar-hover: white;
     }
 
     body {
@@ -277,17 +283,17 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
     }
 
     ::-webkit-scrollbar-track {
-      background: var(--button-background-color); 
+      background: var(--scroll-bar-background); 
       border-radius: 10px; 
     }
 
     ::-webkit-scrollbar-thumb {
-      background: var(--background-color); 
+      background: var(--scroll-bar); 
       border-radius: 10px; 
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background: var(--button-hover-background-color); 
+      background: var(--scroll-bar-hover); 
     }
   </style>
 </head>
