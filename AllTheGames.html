@@ -1,6 +1,7 @@
 
 
 
+
 <!-- Copyright Notice -->
 <!--
 Copyright © 2024 Anonymous. All rights reserved.
@@ -40,262 +41,6 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --background-color: #121212;
-      --text-color: #fff;
-      --container-background-color: #1e1e1e;
-      --button-background-color: #bd45459a;
-      --button-hover-background-color: #bd45459a;
-      --selection-color: black;
-      --selection-color-background: white;
-      --button-border-radius: 8px;
-      --input-border-radius: 6px;
-      --shadow-color: rgba(211, 48, 48, 0.593);
-      --link-color: white;
-      --scroll-bar-background: #bd45459a;
-      --scroll-bar: #121212;
-      --scroll-bar-hover: #bd45459a;
-    }
-
-    [data-theme="light"] {
-      --background-color: #f0f0f0;
-      --text-color: #000;
-      --container-background-color: #fff;
-      --button-background-color: #bd45459a;
-      --button-hover-background-color: #bd45459a;
-      --selection-color: white;
-      --selection-color-background: black;
-      --shadow-color: rgba(0, 0, 0, 0.2);
-      --link-color: black;
-      --scroll-bar-background: white;
-      --scroll-bar: black;
-      --scroll-bar-hover: #808080;
-    }
-
-    body {
-      font-family: 'Work Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: var(--background-color);
-      color: var(--text-color);
-      text-align: center;
-      box-sizing: border-box;
-      line-height: 1.6;
-      transition: all 0.3s ease;
-    }
-
-    ::selection {
-      background-color: var(--selection-color-background);
-      color: var(--selection-color);
-    }
-
-    .container {
-      max-width: 600px;
-      margin: 100px auto;
-      padding: 40px;
-      background-color: var(--container-background-color);
-      text-align: center;
-      border-radius: 12px;
-      box-shadow: 0 0 20px var(--shadow-color);
-      transition: transform 0.3s ease;
-    }
-
-    .container:hover {
-      transform: scale(1.05);
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      font-size: 2.4rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-    }
-
-    .password-input {
-      width: calc(100% - 20px);
-      padding: 15px;
-      margin-bottom: 30px;
-      border: 1px solid #ccc;
-      border-radius: var(--input-border-radius);
-      background-color: var(--background-color);
-      color: var(--text-color);
-      box-shadow: 0 0 10px var(--shadow-color);
-      font-size: 1rem;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .password-input:focus {
-      border-color: #f59e0b;
-      outline: none;
-    }
-
-    .button {
-      padding: 12px 25px;
-      background-color: var(--button-background-color);
-      color: var(--text-color);
-      border: none;
-      border-radius: var(--button-border-radius);
-      cursor: pointer;
-      font-size: 1.1rem;
-      transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-
-    .button:hover {
-      background-color: var(--button-hover-background-color);
-      transform: scale(1.1);
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    .content {
-      margin: 20px;
-      padding: 20px;
-      background-color: var(--container-background-color);
-      border-radius: 12px;
-      box-shadow: 0 0 20px var(--shadow-color);
-      transition: opacity 0.5s ease;
-    }
-
-    .mode-toggle {
-      margin: 20px;
-      padding: 12px 20px;
-      background-color: var(--button-background-color);
-      border: none;
-      border-radius: var(--button-border-radius);
-      cursor: pointer;
-      font-size: 1.1rem;
-      color: var(--text-color);
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .mode-toggle:hover {
-      background-color: var(--button-hover-background-color);
-      transform: scale(1.1);
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      background-color: var(--background-color);
-      transition: all 0.3s ease;
-    }
-
-    nav ul li {
-      margin: 0;
-      padding: 10px;
-    }
-
-    nav ul li button {
-      padding: 15px 25px;
-      background: none;
-      color: var(--text-color);
-      border: 2px solid transparent;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-    }
-
-    nav ul li button:hover {
-      background-color: var(--button-hover-background-color);
-      transform: scale(1.05);
-    }
-
-    main section {
-      padding: 30px;
-      margin: 15px;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      display: none;
-      background-color: var(--container-background-color);
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-    }
-
-    main section.active {
-      display: block;
-      opacity: 1;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 30px;
-      }
-
-      h2 {
-        font-size: 2rem;
-      }
-
-      .password-input, .button {
-        font-size: 1rem;
-      }
-
-      .mode-toggle {
-        padding: 10px 15px;
-      }
-
-      nav ul {
-        flex-direction: column;
-      }
-
-      nav ul li {
-        width: 100%;
-      }
-
-      nav ul li button {
-        width: 100%;
-        padding: 15px 0;
-      }
-    }
-  a:link, a:visited {
-  color: var(--link-color);
-  background-color: transparent;
-  text-decoration: underline;
-  transition: text-shadow 0.3s ease-in-out; 
-
-  }
-
-  a:hover {
-  color: var(--link-color);
-  background-color: transparent;
-  text-decoration: underline;
-  text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red; 
-  }
-
-  a:active {
-  color: var(--link-color);
-  background-color: transparent;
-  text-decoration: underline;
-
-  
-    }
-    
-    
-     ::-webkit-scrollbar {
-      width: 12px; 
-    }
-
-    ::-webkit-scrollbar-track {
-      background: var(--scroll-bar-background); 
-      border-radius: 10px; 
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: var(--scroll-bar); 
-      border-radius: 10px; 
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: var(--scroll-bar-hover); 
-    }
-  </style>
 </head>
 <body>
   <div class="container" id="passwordContainer">
@@ -307,13 +52,12 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
   <div class="content hidden" id="protectedContent">
     <nav>
       <ul>
-        <li><button onclick="showTab('games')"><h3>Games</h3></button></li>
-        <li><button onclick="showTab('contact')"><h3>Contact</h3></button></li>
-        <li><button onclick="showTab('person')"><h3>People</h3></button></li>
-        <li><button onclick="showTab('application')"><h3>Apply</h3></button></li>
+        <li><button onclick="showTab('games')"><h3>🎮</h3></button></li>
+        <li><button onclick="showTab('contact')"><h3>📞</h3></button></li>
+        <li><button onclick="showTab('person')"><h3>🗿</h3></button></li>
+        <li><button onclick="showTab('application')"><h3>🈸</h3></button></li>
         <li><button onclick="showTab('about')"><h3>About</h3></button></li>
         <li><button onclick="showTab('invite')"><h3>Invite</h3></button></li>
-        <li><button onclick="showTab('Help')"><h3>Improvement<h3></button></li>
       </ul>
     </nav>
 
@@ -326,12 +70,21 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
           <input type="text" id="gameSearchInput" class="password-input" placeholder="Search for a game..." oninput="searchItems()">
         </div>
         
-           <button class="mode-toggle" onclick="toggleTheme()">Toggle Theme</button>
+        
+
+    <button class="dark-mode-btn" onclick="toggleDarkMode()">Toggle Light/Dark Mode</button>
+    <div class="dropdown">
+        <button class="dropdown-btn">Select Theme</button>
+        <div class="dropdown-content">
+            <button class="theme1" onclick="changeTheme('theme1')">Green</button>
+            <button class="theme2" onclick="changeTheme('theme2')">Blue</button>
+            <button class="theme3" onclick="changeTheme('theme3')">Red</button>
+        </div>
        
         <p id="responseMessage"></p>
         <h2>Multiplay Games</h2>
         <div class="list-item">
-          <a href="tinyurl.com/mvwm7u99" target="blank">Proxy</a>
+          <a href="https://tinyurl.com/3s9r86s3" target="blank">Proxy</a>
         </div>
         <div class="list-item">
           <a href="https://rubyarcade.lol/" target="blank">Ruby Arcade</a>
@@ -709,6 +462,9 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
           <div class="list-item">
             <a href="https://sites.google.com/site/classroom6x/hello-guys" target="blank">Hello Guys (Sites Games)</a>
           </div>
+          <div class="list-item">
+            <a href="https://eaglymc.com/web-javascript/" target="blank">MineCraft WORKS</a>
+          </div>
         </div>
       </section>
       <section id="contact">
@@ -748,15 +504,355 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
         <button type="submit" class="button">Send Email</button>
     </form>
       </section>
-     <section id="Help">
-  <form onsumbit="event,preventDefault(); sendHelp();">
-	     <button type="submit" class="button">Send Email</button>
-    </section>
+    
     </main>
   </div>
+</body>
+<style>
+:root {
+      --background-color: #DFF7DF;
+      --text-color: #9eee90;
+      --container-background-color: #1e1e1e;
+      --selection-color: #90ee90;
+      --selection-color-background: green;
+      --button-border-radius: 8px;
+      --input-border-radius: 6px;
+      --link-color: #9ee90;
+      --scroll-bar-background: #bd45459a;
+      --scroll-bar: #121212;
+      --scroll-bar-hover: #bd45459a;
+      --button: green;
+    }
+
+ .theme-buttons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .theme-buttons button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .theme1 {
+            background-color: green;
+           
+           --selection-color: #90ee90;
+           --selection-color-background: green;
+          --button: green;
+         
+         
+        }
+
+        .theme2 {
+            background-color: blue;
+           
+           --selection-color: lightblue;
+            --selection-color-background: blue;
+          --button:blue;
+   
+        
+        }
+
+        .theme3 {
+            background-color: red;
+           
+           --selection-color: #FFCCCB;
+            --selection-color-background: red;
+          --button: red;
+       
+        
+        }
+
+        .dark-mode-btn {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            border: none;
+            background-color: #333;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
 
-  <script>
+    body {
+      font-family: 'Work Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      text-align: center;
+      box-sizing: border-box;
+      line-height: 1.6;
+      transition: all 0.3s ease;
+    }
+
+    ::selection {
+      background-color: var(--selection-color-background);
+      color: var(--selection-color);
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 100px auto;
+      padding: 40px;
+      background-color: var(--container-background-color);
+      text-align: center;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+      transform: scale(1.05);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      color: var(--text-color);
+    }
+
+    .password-input {
+      width: calc(100% - 20px);
+      padding: 15px;
+      margin-bottom: 30px;
+      border: 1px solid #ccc;
+      border-radius: var(--input-border-radius);
+      background-color: black;
+      color: var(--text-color);
+      font-size: 1rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .password-input:focus {
+      border-color: #f59e0b;
+      outline: none;
+    }
+
+    .button {
+      padding: 12px 25px;
+      background-color: var(--button-background-color);
+      color: var(--text-color);
+      border: none;
+      border-radius: var(--button-border-radius);
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: var(--button-hover-background-color);
+      transform: scale(1.1);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .content {
+      margin: 20px;
+      padding: 20px;
+      background-color: var(--container-background-color);
+      border-radius: 12px;
+      transition: opacity 0.5s ease;
+    }
+
+    .mode-toggle {
+      margin: 20px;
+      padding: 12px 20px;
+      background-color: var(--button-background-color);
+      border: none;
+      border-radius: var(--button-border-radius);
+      cursor: pointer;
+      font-size: 1.1rem;
+      color: var(--text-color);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .mode-toggle:hover {
+      background-color: var(--button-hover-background-color);
+      transform: scale(1.1);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: var(--background-color);
+      transition: all 0.3s ease;
+      border-radius: 10px;
+    }
+
+    nav ul li {
+      margin: 0;
+      padding: 10px;
+    }
+
+    nav ul li button {
+      padding: 15px 25px;
+      background: none;
+      color: var(--text-color);
+      border: 2px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+    h1 {
+      color: var(--text-color);
+}
+
+    nav ul li button:hover {
+      background-color: var(--button-hover-background-color);
+      transform: scale(1.05);
+    }
+
+    main section {
+      padding: 30px;
+      margin: 15px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      display: none;
+      background-color: var(--background-color);
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    main section.active {
+      display: block;
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px;
+      }
+
+      h2 {
+        font-size: 2rem;
+        color: var(--text-color);
+      }
+
+      .password-input, .button {
+        font-size: 1rem;
+      }
+
+      .mode-toggle {
+        padding: 10px 15px;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        width: 100%;
+      }
+
+      nav ul li button {
+        width: 100%;
+        padding: 15px 0;
+      }
+    }
+  a:link, a:visited {
+  color: var(--link-color);
+  background-color: transparent;
+  text-decoration: underline;
+  }
+
+  a:hover {
+  color: var(--link-color);
+  background-color: transparent;
+  text-decoration: underline;
+  }
+
+  a:active {
+  color: var(--link-color);
+  background-color: transparent;
+  text-decoration: underline;
+
+  
+    }
+    
+    
+     ::-webkit-scrollbar {
+      width: 12px; 
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--container-background-color); 
+      border-radius: 10px; 
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--text-color); 
+      border-radius: 10px; 
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--background); 
+    }
+    
+      .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown button */
+        .dropdown-btn {
+            background-color: var(--button);
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+          border-radius: var(--input-border-radius);
+          
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+         
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Dropdown links (buttons styled as dropdown options) */
+        .dropdown-content button {
+            background-color: white;
+            color: black;
+            padding: 12px 16px;
+            border: none;
+            text-align: left;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        /* Show dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Change background color on hover */
+        .dropdown-content button:hover {
+            background-color: #ddd;
+        }
+</style>
+<script>
 function checkPassword() {
       const password = document.getElementById('password').value;
       const correctPassword = atob('Z2FtZTEyMw==');
@@ -785,10 +881,63 @@ function checkPassword() {
       activeSection.classList.add('active');
     }
 
-    function toggleTheme() {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      document.documentElement.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
-    }
+   let isDarkMode = false;
+
+        // Store theme colors
+        const themes = {
+            theme1: {
+        background: '#1B5E20',
+        text: '#A5D6A7',
+        darkBackground: '#DFF7DF',
+        darkText: '#2E7D32',
+        selection: { background: '#A5D6A7', color: '#1B5E20' }, // Add selection styles
+    },
+    theme2: {
+        background: '#0D47A1',
+        text: '#BBDEFB',
+        darkBackground: '#E3F2FD',
+        darkText: '#0D47A1',
+        selection: { background: '#BBDEFB', color: '#0D47A1' }, // Add selection styles
+    },
+    theme3: {
+        background: '#FF6F00',
+        text: '#FFE082',
+        darkBackground: '#FFF8E1',
+        darkText: '#FF6F00',
+        selection: { background: '#FFE082', color: '#FF6F00' }, // Add selection styles
+        
+    },
+        };
+
+        let currentTheme = 'theme1'; // Default theme
+
+     function changeTheme(theme) {
+       currentTheme = theme;
+            updateColors();
+            document.body.className = theme; // Example: apply a class to change themes
+        }
+        function toggleDarkMode() {
+            isDarkMode = !isDarkMode;
+            updateColors();
+        }
+
+        function updateColors() {
+            const root = document.documentElement;
+            const theme = themes[currentTheme];
+
+            if (isDarkMode) {
+                root.style.setProperty('--background-color', theme.darkBackground);
+                root.style.setProperty('--text-color', theme.darkText);
+                document.querySelector('.dark-mode-btn').textContent = '🌙';
+            } else {
+                root.style.setProperty('--background-color', theme.background);
+                root.style.setProperty('--text-color', theme.text);
+                document.querySelector('.dark-mode-btn').textContent = '☀️';
+            }
+        }
+
+        // Initialize the default theme
+        updateColors();
 
     function sendPreMadeEmail() {
             // Get the recipient's email address from the input field
@@ -801,19 +950,7 @@ function checkPassword() {
 
             const subject = encodeURIComponent("You have been invited");
             const body = encodeURIComponent(
-                `Hello,\n\nIf you recive this email you have been invited to a game doc.\n\nPlease visit the following link for more information:\nhttps://github.com/Thebest-Fish/UnblockedGames.\nIf it asks for a password please enter game123.\n\nBest regards,\nGame Doc Web Dev`
-            );
-
-
-	      function sendHelp() {
-            // Get the recipient's email address from the input field
-            const recipient = 96654@psdschools.org;
-
-        
-
-            const subject = encodeURIComponent("You have been invited");
-            const body = encodeURIComponent(
-                `Hello,\n\nIf you recive this email you have been invited to a game doc.\n\nPlease visit the following link for more information:\nhttps://github.com/Thebest-Fish/UnblockedGames.\nIf it asks for a password please enter game123.\n\nBest regards,\nGame Doc Web Dev`
+                `Hello,\n\nIf you recive this email you have been invited to a game doc.\n\nPlease visit the following link for more information:\nhttps://github.com/Thebest-Fish/UnblockedGames.\nIf it asks for a password please enter atob('Zb36watsffg').\n\nBest regards,\nGame Doc Web Dev`
             );
 
         
@@ -821,8 +958,7 @@ function checkPassword() {
 
             window.location.href = mailtoLink;
         }
-
-	  
+    
      function searchItems() {
     const searchInput = document.getElementById('gameSearchInput').value.toLowerCase(); 
     const items = document.querySelectorAll('.list-item');
@@ -864,6 +1000,5 @@ function checkPassword() {
             };
             xhr.send(formData);
         });
-  </script>
-</body>
+</script>
 </html>
