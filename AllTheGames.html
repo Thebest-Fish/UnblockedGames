@@ -44,9 +44,11 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
 </head>
 <body>
   <div class="container" id="passwordContainer">
-    <h2>Password Protected Page</h2>
+    <color>Password Protected Page</color>
     <input type="password" id="password" class="password-input" placeholder="Enter password">
-    <button class="button" onclick="checkPassword()">Submit</button>
+    
+    <button class="button1" onclick="checkPassword()">Submit</button>
+    
   </div>
 
   <div class="content hidden" id="protectedContent">
@@ -66,7 +68,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
       
       <section id="games" class="active">
       <div>
-          <h1>Made By: Ashvath Gupta</h1>
+          <h2>Made By: Ashvath Gupta</h2>
         </div>
         <div class="search-container">
           <input type="text" id="gameSearchInput" class="password-input" placeholder="Search for a game..." oninput="searchItems()">
@@ -515,7 +517,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
 </body>
 <style>
 :root {
-     
+       --container-background-color: #8B0000;
       --background-color: #ffcccc;
       --text-color: #660000;
       --selection-color-background: #660000;
@@ -549,6 +551,17 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
       padding: 10px;
       font-size: 1rem;
     }
+  
+  .button1 {
+    padding: 12px 25px;
+      background-color: var(--button-background-color);
+      color: white;
+      border: none;
+      border-radius: var(--button-border-radius);
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+  }
 
 
          /* Light Themes */
@@ -794,6 +807,12 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
       background-color: var(--button-hover-background-color);
       transform: scale(1.1);
     }
+  
+  color {
+    color: white;
+      font-size: 40px;
+      font-weight: bold;
+  }
 
     nav ul {
       list-style: none;
