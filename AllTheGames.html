@@ -60,7 +60,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
         <li><button onclick="showTab('application')"><h3>🈸</h3></button></li>
         <li><button onclick="showTab('about')"><h3>ℹ️</h3></button></li>
         <li><button onclick="showTab('invite')"><h3>✉️</h3></button></li>
-        <li><button onclick="showTab('theme')"><h3>☯️</h3></button></li>
+        <li><button onclick="showTab('theme')"><h3>☯</h3></button></li>
       </ul>
     </nav>
 
@@ -487,7 +487,13 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
       </section>
       <section id="about">
         <h2>About</h2>
-        <p>This website is built to help students learn and explore a variety of resources.</p>
+        <p>This is a game website created by Ashvath Gupta.
+        <div>This website has more than 1150 games and more than just fun.</div>
+        <div>Later there will be videos and movies being add so you can watch them from right here</div>
+        <div>Thanks for visiting this really helps me in a veiwpoint under my programming experience</div>
+        
+        </p>
+        
       </section>
       <section id="invite">
         <h2>Invite</h2>
@@ -509,7 +515,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
     <button class="theme-button" onclick="switchTheme('purple')">🟣</button>
     <button class="theme-button" onclick="switchTheme('brown')">🟤</button>
         
-       <button class="dark-mode-toggle" onclick="toggleDarkMode()">☯️</button>
+       <button class="dark-mode-toggle" onclick="toggleDarkMode(this)">☀</button>
       </section>
     
     </main>
@@ -1020,9 +1026,10 @@ function checkPassword() {
       document.body.setAttribute("data-theme", currentTheme);
     }
 
-    function toggleDarkMode() {
+    function toggleDarkMode(button) {
       isDarkMode = !isDarkMode;
       switchTheme(currentTheme.replace("-dark", ""));
+          button.textContent = isDarkMode ? "🌑" : "☀";
     }
 
     function sendPreMadeEmail() {
