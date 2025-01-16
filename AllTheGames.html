@@ -58,10 +58,12 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
         <li><button onclick="showTab('application')"><h3>🈸</h3></button></li>
         <li><button onclick="showTab('about')"><h3>About</h3></button></li>
         <li><button onclick="showTab('invite')"><h3>Invite</h3></button></li>
+        <li><button onclick="showTab('theme')"><h3>Theme</h3></button></li>
       </ul>
     </nav>
 
     <main>
+      
       <section id="games" class="active">
       <div>
           <h1>Made By: Ashvath Gupta</h1>
@@ -70,16 +72,6 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
           <input type="text" id="gameSearchInput" class="password-input" placeholder="Search for a game..." oninput="searchItems()">
         </div>
         
-        
-
-    <button class="dark-mode-btn" onclick="toggleDarkMode()">Toggle Light/Dark Mode</button>
-    <div class="dropdown">
-        <button class="dropdown-btn">Select Theme</button>
-        <div class="dropdown-content">
-            <button class="theme1" onclick="changeTheme('theme1')">Green</button>
-            <button class="theme2" onclick="changeTheme('theme2')">Blue</button>
-            <button class="theme3" onclick="changeTheme('theme3')">Red</button>
-        </div>
        
         <p id="responseMessage"></p>
         <h2>Multiplay Games</h2>
@@ -504,17 +496,30 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
         <button type="submit" class="button">Send Email</button>
     </form>
       </section>
+    <section id="theme">
+      
+    
+                <button class="theme-button" onclick="switchTheme('red')">Red</button>
+    <button class="theme-button" onclick="switchTheme('orange')">Orange</button>
+    <button class="theme-button" onclick="switchTheme('yellow')">Yellow</button>
+    <button class="theme-button" onclick="switchTheme('green')">Green</button>
+    <button class="theme-button" onclick="switchTheme('blue')">Blue</button>
+    <button class="theme-button" onclick="switchTheme('purple')">Purple</button>
+    <button class="theme-button" onclick="switchTheme('brown')">Brown</button>
+        
+       <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+      </section>
     
     </main>
   </div>
 </body>
 <style>
 :root {
-      --background-color: #DFF7DF;
-      --text-color: #9eee90;
-      --container-background-color: #1e1e1e;
-      --selection-color: #90ee90;
-      --selection-color-background: green;
+     
+      --background-color: #ffcccc;
+      --text-color: #660000;
+      --selection-color-background: #660000;
+      --selection-color: #ffcccc;
       --button-border-radius: 8px;
       --input-border-radius: 6px;
       --link-color: #9ee90;
@@ -538,48 +543,154 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
             font-size: 16px;
             border-radius: 5px;
         }
+  
+  .dropdown {
+      margin: 20px;
+      padding: 10px;
+      font-size: 1rem;
+    }
 
-        .theme1 {
-            background-color: green;
-           
-           --selection-color: #90ee90;
-           --selection-color-background: green;
-          --button: green;
-         
-         
-        }
 
-        .theme2 {
-            background-color: blue;
-           
-           --selection-color: lightblue;
-            --selection-color-background: blue;
-          --button:blue;
-   
-        
-        }
+         /* Light Themes */
+    [data-theme="red"] {
+      --background-color: #ffcccc;
+      --text-color: #660000;
+      --selection-color-background: #660000;
+      --selection-color: #ffcccc;
+       --container-background-color: #8B0000;
+      --hoverColor: 2px 2px 8px #FF0000;
+    }
 
-        .theme3 {
-            background-color: red;
-           
-           --selection-color: #FFCCCB;
-            --selection-color-background: red;
-          --button: red;
-       
-        
-        }
+    [data-theme="orange"] {
+      --background-color: #ffe5cc;
+      --text-color: #994c00;
+      --selection-color-background: #994c00;
+       --selection-color: #ffe5cc;
+       --container-background-color: #ff8c00;
+      --hoverColor: 2px 2px 8px #ffc00;
+    }
 
-        .dark-mode-btn {
-            display: block;
-            margin: 10px auto;
-            padding: 10px 20px;
-            border: none;
-            background-color: #333;
-            color: white;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    [data-theme="yellow"] {
+      --background-color: #ffffcc;
+      --text-color: #666600;
+      --selection-color-background: #666600;
+       --selection-color: #ffffcc;
+       --container-background-color: #AA6C39;
+      --hoverColor: 2px 2px 8px #AA6C39;
+    }
+
+    [data-theme="green"] {
+      --background-color: #ccffcc;
+      --text-color: #006600;
+      --selection-color-background: #006600;
+       --selection-color: #ccffcc;
+       --container-background-color: #06402B;
+      --hoverColor: 2px 2px 8px #06402B;
+    }
+
+    [data-theme="blue"] {
+      --background-color: #cce5ff;
+      --text-color: #003366;
+      --selection-color-background: #003366;
+       --selection-color: #cce5ff;
+       --container-background-color: #00008B;
+      --hoverColor: 2px 2px 8px #00008B;
+    }
+
+    [data-theme="purple"] {
+      --background-color: #e5ccff;
+      --text-color: #4b0082;
+      --selection-color-background: #4b0082;
+       --selection-color: #e5ccff;
+       --container-background-color: #301934;
+            --hoverColor: 2px 2px 8px #301934;
+    }
+
+    [data-theme="brown"] {
+      --background-color: #f2e6d9;
+      --text-color: #663300;
+      --selection-color-background: #663300;
+       --selection-color: #f2e6d9;
+       --container-background-color: #5C4033;
+      --hoverColor: 2px 2px 8px #5C4033;
+    }
+
+    /* Dark Themes */
+    [data-theme="red-dark"] {
+      --background-color: #4d0000;
+      --text-color: #ffb3b3;
+      --selection-color-background: #ffb3b3;
+       --selection-color: #4d0000;
+       --container-background-color: #1e1e1e;
+       --hoverColor: 2px 2px 8px #1e1e1e;
+    }
+
+    [data-theme="orange-dark"] {
+      --background-color: #4c1a00;
+      --text-color: #ffcc99;
+      --selection-color-background: #ffcc99;
+       --selection-color: #4c1a00;
+       --container-background-color: #1e1e1e;
+       --hoverColor: 2px 2px 8px #1e1e1e;
+    }
+
+    [data-theme="yellow-dark"] {
+      --background-color: #4d4d00;
+      --text-color: #ffff99;
+      --selection-color-background: #ffff99;
+       --selection-color: #4d4d00;
+       --container-background-color: #1e1e1e;
+       --hoverColor: 2px 2px 8px #1e1e1e;
+    }
+
+    [data-theme="green-dark"] {
+      --background-color: #003300;
+      --text-color: #b3ffb3;
+      --selection-color-background: #b3ffb3;
+       --selection-color: #003300;
+       --container-background-color: #1e1e1e;
+       --hoverColor: 2px 2px 8px #1e1e1e;
+    }
+
+    [data-theme="blue-dark"] {
+      --background-color: #001a4d;
+      --text-color: #99ccff;
+      --selection-color-background: #99ccff;
+       --selection-color: #001a4d;
+       --container-background-color: #1e1e1e;
+       --hoverColor: 2px 2px 8px #1e1e1e;
+    }
+
+    [data-theme="purple-dark"] {
+      --background-color: #2d004d;
+      --text-color: #dab3ff;
+      --selection-color-background: #dab3ff;
+       --selection-color: #2d004d;
+       --container-background-color: #1e1e1e;
+       --hoverColor: 2px 2px 8px #1e1e1e;
+    }
+
+    [data-theme="brown-dark"] {
+      --background-color: #331a00;
+      --text-color: #e6ccb3;
+       --selection-color-background:  #e6ccb3;
+       --selection-color: #331a00;
+       --container-background-color: #1e1e1e;
+       --hoverColor: 2px 2px 8px #1e1e1e;
+    }
+  .theme-button, .dark-mode-toggle {
+      margin: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #ddd;
+      transition: background-color 0.3s ease;
+    }
+
+    .theme-button:hover, .dark-mode-toggle:hover {
+      background-color: #bbb;
+    }
 
 
     body {
@@ -628,8 +739,8 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
       margin-bottom: 30px;
       border: 1px solid #ccc;
       border-radius: var(--input-border-radius);
-      background-color: black;
-      color: var(--text-color);
+      background-color: var(--container-background-color);
+      color: var(--background-color);
       font-size: 1rem;
       transition: all 0.3s ease-in-out;
     }
@@ -776,6 +887,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
   color: var(--link-color);
   background-color: transparent;
   text-decoration: underline;
+    text-shadow: var(--hoverColor)
   }
 
   a:active {
@@ -881,63 +993,18 @@ function checkPassword() {
       activeSection.classList.add('active');
     }
 
-   let isDarkMode = false;
+       let currentTheme = "red";
+    let isDarkMode = false;
 
-        // Store theme colors
-        const themes = {
-            theme1: {
-        background: '#1B5E20',
-        text: '#A5D6A7',
-        darkBackground: '#DFF7DF',
-        darkText: '#2E7D32',
-        selection: { background: '#A5D6A7', color: '#1B5E20' }, // Add selection styles
-    },
-    theme2: {
-        background: '#0D47A1',
-        text: '#BBDEFB',
-        darkBackground: '#E3F2FD',
-        darkText: '#0D47A1',
-        selection: { background: '#BBDEFB', color: '#0D47A1' }, // Add selection styles
-    },
-    theme3: {
-        background: '#FF6F00',
-        text: '#FFE082',
-        darkBackground: '#FFF8E1',
-        darkText: '#FF6F00',
-        selection: { background: '#FFE082', color: '#FF6F00' }, // Add selection styles
-        
-    },
-        };
+    function switchTheme(theme) {
+      currentTheme = theme + (isDarkMode ? "-dark" : "");
+      document.body.setAttribute("data-theme", currentTheme);
+    }
 
-        let currentTheme = 'theme1'; // Default theme
-
-     function changeTheme(theme) {
-       currentTheme = theme;
-            updateColors();
-            document.body.className = theme; // Example: apply a class to change themes
-        }
-        function toggleDarkMode() {
-            isDarkMode = !isDarkMode;
-            updateColors();
-        }
-
-        function updateColors() {
-            const root = document.documentElement;
-            const theme = themes[currentTheme];
-
-            if (isDarkMode) {
-                root.style.setProperty('--background-color', theme.darkBackground);
-                root.style.setProperty('--text-color', theme.darkText);
-                document.querySelector('.dark-mode-btn').textContent = '🌙';
-            } else {
-                root.style.setProperty('--background-color', theme.background);
-                root.style.setProperty('--text-color', theme.text);
-                document.querySelector('.dark-mode-btn').textContent = '☀️';
-            }
-        }
-
-        // Initialize the default theme
-        updateColors();
+    function toggleDarkMode() {
+      isDarkMode = !isDarkMode;
+      switchTheme(currentTheme.replace("-dark", ""));
+    }
 
     function sendPreMadeEmail() {
             // Get the recipient's email address from the input field
