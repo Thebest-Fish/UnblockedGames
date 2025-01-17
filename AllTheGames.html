@@ -62,6 +62,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
         <li><button onclick="showTab('about')"><h3>ℹ</h3></button></li>
         <li><button onclick="showTab('invite')"><h3>✉</h3></button></li>
         <li><button onclick="showTab('theme')"><h3>☯</h3></button></li>
+         <li><button onclick="showTab('movie')"><h3>📽</h3></button></li>
       </ul>
     </nav>
 
@@ -490,7 +491,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
         <h2>About</h2>
         <p>This is a game website created by Ashvath Gupta.
         <div>This website has more than 1150 games and more than just fun.</div>
-        <div>Later there will be videos and movies being add so you can watch them from right here</div>
+        <div>There are also movies you can watch from right here in the movies tab.</div>
         <div>Thanks for visiting this really helps me in a veiwpoint under my programming experience</div>
         
         </p>
@@ -506,9 +507,10 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
     </form>
       </section>
     <section id="theme">
-      
+      <h2>Themes</h2>
+      <h3>Select a theme and your website will adapt</h3>
     
-                <button class="theme-button" onclick="switchTheme('red')">🔴</button>
+    <button class="theme-button" onclick="switchTheme('red')">🔴</button>
     <button class="theme-button" onclick="switchTheme('orange')">🟠</button>
     <button class="theme-button" onclick="switchTheme('yellow')">🟡</button>
     <button class="theme-button" onclick="switchTheme('green')">🟢</button>
@@ -519,6 +521,16 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
        <button class="dark-mode-toggle" onclick="toggleDarkMode(this)">☀</button>
       </section>
     
+    <section id="movie">
+      <h2>Movies</h2>
+      <h3>Watch from a varity of websites</h3>
+      <h4>Works for a majority of movies but not all</h4>
+     <iframe id="myIframe" src="https://123telugumoviehd.club/" title="Embedded Website" allowfullscreen></iframe>
+  <br>
+  <button class="dark-mode-toggle" onclick="toggleFullscreen()">Toggle Fullscreen</button>
+    </section>
+    
+ 
     </main>
   </div>
 </body>
@@ -537,6 +549,12 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
       --scroll-bar-hover: #bd45459a;
       --button: green;
      --text-box-color: #ffcccc; 
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #ccc;
+     border-radius: 10px;
     }
 
  .theme-buttons {
@@ -1009,6 +1027,19 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
         }
 </style>
 <script>
+  
+  function toggleFullscreen() {
+      const iframe = document.getElementById('myIframe');
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+      } else if (iframe.mozRequestFullScreen) { // Firefox
+        iframe.mozRequestFullScreen();
+      } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+        iframe.webkitRequestFullscreen();
+      } else if (iframe.msRequestFullscreen) { // IE/Edge
+        iframe.msRequestFullscreen();
+      }
+    }
 function checkPassword() {
       const password = document.getElementById('password').value;
       const correctPassword = atob('Z2FtZTEyMw==');
@@ -1112,5 +1143,19 @@ function checkPassword() {
             };
             xhr.send(formData);
         });
+  function updateContent(faviconURL, logoURL, newTitle) {
+      // Change the favicon
+      const favicon = document.getElementById("favicon");
+      favicon.href = faviconURL;
+
+      // Change the logo
+      const logo = document.getElementById("logo");
+      logo.src = logoURL;
+      logo.alt = `Logo for ${newTitle}`;
+
+      // Change the title
+      document.title = newTitle;
+      document.getElementById("page-title").innerText = newTitle;
+    }
 </script>
 </html>
