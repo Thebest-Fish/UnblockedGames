@@ -536,6 +536,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
       --scroll-bar: #121212;
       --scroll-bar-hover: #bd45459a;
       --button: green;
+     --text-box-color: #ffcccc; 
     }
 
  .theme-buttons {
@@ -579,6 +580,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
       --selection-color: #ffcccc;
        --container-background-color: #8B0000;
       --hoverColor: 2px 2px 8px #FF0000;
+      --text-box-color: #ffcccc; 
     }
 
     [data-theme="orange"] {
@@ -588,6 +590,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
        --selection-color: #ffe5cc;
        --container-background-color: #ff8c00;
       --hoverColor: 2px 2px 8px #ffc00;
+      --text-box-color: #ffe5cc;
     }
 
     [data-theme="yellow"] {
@@ -597,6 +600,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
        --selection-color: #ffffcc;
        --container-background-color: #AA6C39;
       --hoverColor: 2px 2px 8px #AA6C39;
+      --text-box-color: #ffffcc; 
     }
 
     [data-theme="green"] {
@@ -606,6 +610,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
        --selection-color: #ccffcc;
        --container-background-color: #06402B;
       --hoverColor: 2px 2px 8px #06402B;
+      --text-box-color: #ccffcc;
     }
 
     [data-theme="blue"] {
@@ -615,6 +620,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
        --selection-color: #cce5ff;
        --container-background-color: #00008B;
       --hoverColor: 2px 2px 8px #00008B;
+      --text-box-color: #cce5ff;
     }
 
     [data-theme="purple"] {
@@ -624,6 +630,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
        --selection-color: #e5ccff;
        --container-background-color: #301934;
             --hoverColor: 2px 2px 8px #301934;
+        --text-box-color: #e5ccff;
     }
 
     [data-theme="brown"] {
@@ -633,6 +640,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
        --selection-color: #f2e6d9;
        --container-background-color: #5C4033;
       --hoverColor: 2px 2px 8px #5C4033;
+      --text-box-color: #f2e6d9;
     }
 
     /* Dark Themes */
@@ -643,6 +651,9 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
        --selection-color: #4d0000;
        --container-background-color: #1e1e1e;
        --hoverColor: 2px 2px 8px #1e1e1e;
+              --text-box-color: #ffcccc; 
+
+
     }
 
     [data-theme="orange-dark"] {
@@ -652,6 +663,8 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
        --selection-color: #4c1a00;
        --container-background-color: #1e1e1e;
        --hoverColor: 2px 2px 8px #1e1e1e;
+              --text-box-color: #ffe5cc;
+
     }
 
     [data-theme="yellow-dark"] {
@@ -661,6 +674,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
        --selection-color: #4d4d00;
        --container-background-color: #1e1e1e;
        --hoverColor: 2px 2px 8px #1e1e1e;
+    --text-box-color: #ffffcc; 
     }
 
     [data-theme="green-dark"] {
@@ -670,6 +684,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
        --selection-color: #003300;
        --container-background-color: #1e1e1e;
        --hoverColor: 2px 2px 8px #1e1e1e;
+     --text-box-color: #ccffcc;
     }
 
     [data-theme="blue-dark"] {
@@ -679,6 +694,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
        --selection-color: #001a4d;
        --container-background-color: #1e1e1e;
        --hoverColor: 2px 2px 8px #1e1e1e;
+     --text-box-color: #cce5ff;
     }
 
     [data-theme="purple-dark"] {
@@ -688,6 +704,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
        --selection-color: #2d004d;
        --container-background-color: #1e1e1e;
        --hoverColor: 2px 2px 8px #1e1e1e;
+       --text-box-color: #e5ccff;
     }
 
     [data-theme="brown-dark"] {
@@ -697,6 +714,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
        --selection-color: #331a00;
        --container-background-color: #1e1e1e;
        --hoverColor: 2px 2px 8px #1e1e1e;
+        --text-box-color: #f2e6d9;
     }
   .theme-button, .dark-mode-toggle {
       margin: 5px;
@@ -760,13 +778,13 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
       border: 1px solid #ccc;
       border-radius: var(--input-border-radius);
       background-color: var(--container-background-color);
-      color: var(--background-color);
+      color: var(--text-box-color);
       font-size: 1rem;
       transition: all 0.3s ease-in-out;
     }
 
     .password-input:focus {
-      border-color: #f59e0b;
+      border-color: var(--background-color);
       outline: none;
     }
 
