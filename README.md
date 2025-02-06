@@ -2,36 +2,16 @@
 This a games page
 how to get the website running
 
-step 1 open `AllTheGames.html` from this repository
+step 1 open `CodeSpaces` from this repository
 
-step 2 click the `download raw folder` from the top right corner of the code
+step 2 click the `Teminal` from the bottom right corner of the `codespace`
 
-<img src="https://www.iconbolt.com/preview/facebook/heroicons-solid/arrow-down-tray.svg" height=50px>
-<div>Finished</div>
-<h1>If above instructions does not work then follow below</h1>
-
-step 1 take code from `AllTheGames.html`
-
-step 2 Open `terminal/bash` and make a new folder in Desktop use ```C:Path/to/your/Desktop> mikdr folderName```
-
-step 3 open folder and make new `.txt`
-
-step 4 select `notepad` if option comes up
-
-step 5 paste code in `.txt` file
-
-step 6 save `.txt` as `.html`
-  
-step 7 open up folder and double click the `fileName.html`
-<div>Now that has created a finished website</div>
-
-<h1>If you have a Proxy</h1>
-
-step 1 `copy` this link 
+step 3 run
 
 ```
-https://thebest-fish.github.io/UnblockedGames/
+cd Games/
+cd npm/
+npm install express
+npm start
 ```
-This link is blocked so you need to use a proxy
-
-step 2 `paste` this into the `proxy`
+step 4 click open in browser
