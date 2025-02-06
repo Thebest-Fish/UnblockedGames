@@ -38,8 +38,8 @@ function checkPassword() {
         document.getElementById('passwordContainer').classList.add('hidden');
         document.getElementById('protectedContent').classList.remove('hidden');
       } else {
+        window.location.href = "https://www.youtube.com/watch?v=5z9rzkz4Rv8";
         alert('Incorrect password!');
-        window.location.href = "https://example.com";
       }
     }
 
