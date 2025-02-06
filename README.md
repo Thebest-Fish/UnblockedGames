@@ -2,9 +2,9 @@
 This a games page
 how to get the website running
 
-step 1 open `CodeSpaces` from this repository
+step 1 Open `CodeSpaces` from this repository
 
-step 2 click the `Teminal` from the bottom right corner of the `codespace`
+step 2 click the `Terminal` from the bottom right corner of the `codespace`
 
 step 3 run
 
