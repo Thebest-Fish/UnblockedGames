@@ -39,6 +39,7 @@ function checkPassword() {
         document.getElementById('protectedContent').classList.remove('hidden');
       } else {
         alert('Incorrect password!');
+        window.location.href = "https://example.com";
       }
     }
 
