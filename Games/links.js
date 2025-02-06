@@ -103,8 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
         { "name": "Proxy", "url": "https://rrisd.internet.filters.rugeleychessclub.co.uk/" },
         { "name": "Classroom 6x", "url": "https://sites.google.com/site/classroom6x/unblockedgames" },
         { "name": "PortaPortal", "url": "https://guest.portaportal.com/foreverhappy" },
-        { "name": "MineCraft WORKS", "url": "https://eaglymc.com/web-javascript/" }
-    
+        { "name": "MineCraft WORKS", "url": "https://eaglymc.com/web-javascript/" },
+        { "name": "Algebra Nexus", "url": "https://algebra.learnnexus.xyz/"}
     ];
 
     const container = document.getElementById("games"); // Make sure the correct ID is used
