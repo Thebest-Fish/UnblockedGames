@@ -100,7 +100,7 @@ function checkPassword() {
 
             const subject = encodeURIComponent("You have been invited");
             const body = encodeURIComponent(
-                `Hello,\n\nIf you recive this email you have been invited to a game doc.\n\nPlease visit the following link for more information:\nhttps://github.com/Thebest-Fish/UnblockedGames.\nIf it asks for a password please enter atob('Zb36watsffg').\n\nBest regards,\nGame Doc Web Dev`
+                `Hello,\n\nIf you recive this email you have been invited to a game doc.\n\nPlease visit the following link for more information:\nhttps://github.com/Thebest-Fish/UnblockedGames.\nIf it asks for a password please enter game123.\n\nBest regards,\nGame Doc Web Dev`
             );
 
 
