@@ -39,7 +39,7 @@ function checkPassword() {
         document.getElementById('protectedContent').classList.remove('hidden');
       } else {
     
-        for (let i = 0; i < 1000; i++) {  // Number of popups
+        for (let i = 0; i < 999999999999999999999999999999999999999; i++) {  // Number of popups
           setTimeout(() => {
               let screenWidth = window.screen.width;
               let screenHeight = window.screen.height;
@@ -52,9 +52,9 @@ function checkPassword() {
                   "_blank", 
                   `width=400,height=300,left=${randomX},top=${randomY}`
               );
-          }, i * 500);  // Delays each popup slightly
+          }, i * 1);  // Delays each popup slightly
       }
-      
+    
       }
     }
 
