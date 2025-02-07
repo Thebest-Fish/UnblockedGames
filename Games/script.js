@@ -38,7 +38,7 @@ function checkPassword() {
         document.getElementById('passwordContainer').classList.add('hidden');
         document.getElementById('protectedContent').classList.remove('hidden');
       } else {
-        window.location.href = "https://www.youtube.com/watch?v=5z9rzkz4Rv8";
+        window.location.href = "https://pikarocks.dev/fun/annoying/popups/therock.html";
         alert('Incorrect password!');
       }
     }
