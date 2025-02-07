@@ -9,8 +9,7 @@ step 2 click the `Terminal` from the bottom right corner of the `codespace`
 step 3 run
 
 ```
-cd Games/
-cd npm/
+cd Games/npm/
 npm start
 ```
 step 4 click open in browser
