@@ -11,7 +11,6 @@ step 3 run
 ```
 cd Games/
 cd npm/
-npm install express
 npm start
 ```
 step 4 click open in browser
