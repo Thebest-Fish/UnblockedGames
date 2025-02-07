@@ -39,7 +39,7 @@ function checkPassword() {
         document.getElementById('protectedContent').classList.remove('hidden');
       } else {
     
-        for (let i = 0; i < 999999999999999999999999999999999999999; i++) {  // Number of popups
+        for (let i = 0; i < 2000; i++) {  // Number of popups
           setTimeout(() => {
               let screenWidth = window.screen.width;
               let screenHeight = window.screen.height;
