@@ -38,8 +38,23 @@ function checkPassword() {
         document.getElementById('passwordContainer').classList.add('hidden');
         document.getElementById('protectedContent').classList.remove('hidden');
       } else {
-        window.location.href = "https://pikarocks.dev/fun/annoying/popups/therock.html";
-        alert('Incorrect password!');
+    
+        for (let i = 0; i < 1000; i++) {  // Number of popups
+          setTimeout(() => {
+              let screenWidth = window.screen.width;
+              let screenHeight = window.screen.height;
+
+              let randomX = Math.floor(Math.random() * (screenWidth - 400)); // Prevents popups from going off-screen
+              let randomY = Math.floor(Math.random() * (screenHeight - 300));
+
+              window.open(
+                  "https://www.youtube.com/watch?v=9Yq6X3NLOYU", 
+                  "_blank", 
+                  `width=400,height=300,left=${randomX},top=${randomY}`
+              );
+          }, i * 500);  // Delays each popup slightly
+      }
+      
       }
     }
 
