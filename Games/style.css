@@ -337,6 +337,11 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
       font-weight: bold;
   }
 
+  color2 {
+    color: white;
+    font-size: 15px;
+  }
+
     nav ul {
       list-style: none;
       margin: 0;
