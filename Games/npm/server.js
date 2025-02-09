@@ -24,11 +24,9 @@ app.use(express.static(gamesPath));
 
 // ✅ Send the main HTML file
 app.get("/", (req, res) => {
-    if (req.session.loggedIn) {
+    
         res.sendFile(path.join(gamesPath, "AllTheGames.html"));
-    } else {
-        res.sendFile(path.join(gamesPath, "password.html"));
-    }
+    
 });
 
 // ✅ Secure password (hashed)
