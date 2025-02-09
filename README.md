@@ -10,6 +10,7 @@ step 3 run
 
 ```
 cd Games/npm/
+npm install express cors body-parser bcryptjs
 npm start
 ```
 step 4 click open in browser
