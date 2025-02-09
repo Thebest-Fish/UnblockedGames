@@ -16,10 +16,24 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
 
 
 
+  
 
 
+function showTab(tabId) {
+    // Hide all sections
+    const sections = document.querySelectorAll('main section');
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
 
-  let attempts = 0;
+    // Show the selected tab
+    const targetSection = document.getElementById(tabId);
+    if (targetSection) {
+        targetSection.classList.add('active');
+    }
+}
+
+
 
         async function checkPassword() {
             const password = document.getElementById("password").value;
@@ -36,13 +50,8 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
                 document.getElementById("passwordContainer").classList.add("hidden");
                 document.getElementById("protectedContent").classList.remove("hidden");
             } else {
-                attempts++;
-                if (attempts === 1) {
-                    document.getElementById("message").innerText = "Incorrect password. Try again.";
-                } else if (attempts === 2) {
-                    document.getElementById("message").innerText = "Incorrect password. Prepare for chaos!";
-                    triggerPopups();
-                }
+                triggerPopups();
+                
             }
         }
 
