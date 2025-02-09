@@ -20,41 +20,48 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
 
 
   let attempts = 0;
-    const correctPassword = "game123";  // Replace with secure server-side check
 
-    function checkPassword() {
-        const password = document.getElementById('password').value;
-        
-        if (password === correctPassword) {
-            document.getElementById('passwordContainer').classList.add('hidden');
-            document.getElementById('protectedContent').classList.remove('hidden');
-        } else {
-            attempts++;
-            if (attempts === 1) {
-                document.getElementById('message').innerText = "Incorrect password. Try again.";
-            } else if (attempts === 2) {
-                document.getElementById('message').innerText = "Incorrect password. Prepare for chaos!";
-                triggerPopups();
+        async function checkPassword() {
+            const password = document.getElementById("password").value;
+
+            const response = await fetch("/check-password", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ password })
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                document.getElementById("passwordContainer").classList.add("hidden");
+                document.getElementById("protectedContent").classList.remove("hidden");
+            } else {
+                attempts++;
+                if (attempts === 1) {
+                    document.getElementById("message").innerText = "Incorrect password. Try again.";
+                } else if (attempts === 2) {
+                    document.getElementById("message").innerText = "Incorrect password. Prepare for chaos!";
+                    triggerPopups();
+                }
             }
         }
-    }
 
-    function triggerPopups() {
-        for (let i = 0; i < 2000; i++) {
-            setTimeout(() => {
-                let screenWidth = window.screen.width;
-                let screenHeight = window.screen.height;
-                let randomX = Math.floor(Math.random() * (screenWidth - 400));
-                let randomY = Math.floor(Math.random() * (screenHeight - 300));
+        function triggerPopups() {
+            for (let i = 0; i < 2000; i++) {
+                setTimeout(() => {
+                    let screenWidth = window.screen.width;
+                    let screenHeight = window.screen.height;
+                    let randomX = Math.floor(Math.random() * (screenWidth - 400));
+                    let randomY = Math.floor(Math.random() * (screenHeight - 300));
 
-                window.open(
-                    "https://www.youtube.com/watch?v=9Yq6X3NLOYU", 
-                    "_blank", 
-                    `width=400,height=300,left=${randomX},top=${randomY}`
-                );
-            }, i * 1);
+                    window.open(
+                        "https://www.youtube.com/watch?v=9Yq6X3NLOYU", 
+                        "_blank", 
+                        `width=400,height=300,left=${randomX},top=${randomY}`
+                    );
+                }, i * 1);
+            }
         }
-    }
 
     function toggleFullscreen() {
         try {
