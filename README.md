@@ -15,3 +15,6 @@ npm install express cors body-parser bcryptjs
 npm start
 ```
 step 4 click open in browser
+
+## 📜 License
+See [ALL_RIGHTS_RESERVED](./ALL_RIGHTS_RESERVED) for details.
