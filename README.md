@@ -10,4 +10,4 @@ Click on the `main` and `select` what every is appealing
 
 > [!WARNING]
 > DO NOT HIT THE FORK BUTTON!
-> If you did then delete the forked repo
+> If you did then delete the forked repo.
