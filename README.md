@@ -11,3 +11,6 @@ Click on the `main` and `select` what every is appealing
 > [!WARNING]
 > DO NOT HIT THE FORK BUTTON!
 > If you did then delete the forked repo.
+
+## 📜 License
+See [ALL_RIGHTS_RESERVED](./LICENSE) for details.
