@@ -17,4 +17,4 @@ npm start
 step 4 click open in browser
 
 ## 📜 License
-See [ALL_RIGHTS_RESERVED](./ALL_RIGHTS_RESERVED) for details.
+See [ALL_RIGHTS_RESERVED](./LICENSE) for details.
