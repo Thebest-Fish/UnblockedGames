@@ -142,10 +142,19 @@ function showTab(tabId) {
         xhr.send(formData);
     });
 
-    function updateContent(faviconURL, logoURL, newTitle) {
-        document.getElementById("favicon").href = faviconURL;
-        document.getElementById("logo").src = logoURL;
-        document.getElementById("logo").alt = `Logo for ${newTitle}`;
-        document.title = newTitle;
-        document.getElementById("page-title").innerText = newTitle;
-    }
+document.getElementById("dataForm")?.addEventListener("submit", function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            var xhr = new XMLHttpRequest();
+            var scriptURL = "https://script.google.com/macros/s/AKfycbwN9V2jCW4QYlyp_ywBQJ4m0P9uxEOu2WW8dBFlMfKgtifXHO_lUNR6E4LXCVonHrza/exec"; 
+            
+            xhr.open("POST", scriptURL, true);
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    document.getElementById("responseMessage").innerText = "Login Successful!";
+                } else {
+                    document.getElementById("responseMessage").innerText = "Error logging in.";
+                }
+            };
+            xhr.send(formData);
+        });
