@@ -114,21 +114,7 @@ function showTab(tabId) {
         button.textContent = isDarkMode ? "🌙" : "☀";
     }
 
-    function sendPreMadeEmail() {
-        const recipient = document.getElementById("recipient").value;
-        if (!recipient) {
-            alert("Please enter a recipient email address.");
-            return;
-        }
-
-        const subject = encodeURIComponent("You have been invited");
-        const body = encodeURIComponent(
-            `Hello,\n\nIf you receive this email, you have been invited to a game doc.\n\nPlease visit the following link for more information:\nhttps://github.com/Thebest-Fish/UnblockedGames.\nIf it asks for a password, please enter game123.\n\nBest regards,\nGame Doc Web Dev`
-        );
-
-        const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
-        window.location.href = mailtoLink;
-    }
+  
 
     function searchItems() {
         const searchInput = document.getElementById('gameSearchInput').value.toLowerCase();
