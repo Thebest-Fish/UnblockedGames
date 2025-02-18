@@ -45,6 +45,25 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<nav>
+		<ul>
+			 <li><button onclick="showTab('login')"><h3>Login</h3></button></li>
+			 <li><button onclick="showTab('signUp')"><h3></h3>Sign Up</h3></button></li>
+		</ul>
+	</nav>
+<section id="signUp">
+ <h2>Login</h2>
+    <form id="dataForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+</section>
+	 <section id="login" class="active">
   <div class="container" id="passwordContainer">
     <color>Password Protected Page</color>
     <input type="password" id="password" class="password-input" placeholder="Enter password">
@@ -148,6 +167,7 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
     </main>
   </div>
 <script src="script.js"></script>
+	 </section>
 </body>
 
 </html>
