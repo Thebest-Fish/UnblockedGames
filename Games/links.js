@@ -1,5 +1,5 @@
 
-// Copyright Notice 
+/* Copyright Notice */
 
 /*
 Copyright © 2024 Anonymous. All rights reserved.
@@ -15,120 +15,542 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("links.js loaded!"); // Debugging log
-
-    const links = [
-        { "name": "Proxy", "url": "https://tinyurl.com/3s9r86s3" },
-        { "name": "Ruby Arcade", "url": "https://rubyarcade.lol/" },
-        { "name": "Toni Games", "url": "https://sites.google.com/view/ts-allinone/home" },
-        { "name": "Super Pop Games", "url": "https://superpopskrrtboother.wixsite.com/boother" },
-        { "name": "Tech at Timnath", "url": "https://sites.google.com/psdschools.org/technology/fun" },
-        { "name": "Arcade Games", "url": "https://arcadespot.com/" },
-        { "name": "Syces Game Shack", "url": "https://history-archive.vercel.app/games.html" },
-        { "name": "Szvy Central", "url": "https://google-images.global.ssl.fastly.net/pages/gxmez.html" },
-        { "name": "Symbaloo Games", "url": "https://blog.symbaloo.com/webmixes/4/unblocked-games" },
-        { "name": "Unblocked Games 66", "url": "https://sites.google.com/site/unblockedgames66fun/home" },      
-        { "name": "Primary Games", "url": "https://www.primarygames.co.uk/" },
-        { "name": "Hooda Math", "url": "https://www.hoodamath.com/games/unblocked.html#gsc.tab=0" },
-        { "name": "Neon SandBox", "url": "https://29a.ch/sandbox/2011/neonflames/" },
-        { "name": "Symbaloo Games 2", "url": "https://www.symbaloo.com/mix/agariounblockedschool?lang=EN" },
-        { "name": "Mobile Games Online", "url": "https://www.learn4good.com/games/play-mobile-games-online8.htm" },
-        { "name": "Family Feud", "url": "https://play.dictionary.com/games/family-feud" },
-        { "name": "CbC Games", "url": "https://www.cbc.ca/kids/" },
-        { "name": "MSN Games", "url": "https://www.msn.com/en-us/play?ocid=cgbinghp" },
-        { "name": "Hooda Math", "url": "https://www.hoodamath.com/index.html#gsc.tab=0" },
-        { "name": "Symbaloo Games 3", "url": "https://www.symbaloo.com/library" },
-        { "name": "Brainden Games", "url": "http://brainden.com/brain-games.htm" },
-        { "name": "Driving Simulator", "url": "https://drivingskillsforlife.com/training/games" },
-        { "name": "Quick Draw Games", "url": "https://quickdraw.withgoogle.com/" },
-        { "name": "Review Game Zone", "url": "https://reviewgamezone.com" },
-        { "name": "Pixel SpeedRun", "url": "https://www.construct.net/en/free-online-games/pixel-speedrun-2363/play" },
-        { "name": "Shot Out 4 (2 player only)", "url": "https://www.construct.net/en/free-online-games/shot-40843/play?srsltid=AfmBOor-L5O-V_3DbOyWOMlEtwJWXNAnfNlZfFWy4VDc_WzymSY0Vh4e" },
-        { "name": "Coffee Shop Games", "url": "https://www.culinaryschools.org/kids-games/coffee-shop/" },
-        { "name": "Bulitins Games", "url": "https://www.builtinsf.com/company/unblocked-games" },
-        { "name": "Unblocked Games 57", "url": "https://sites.google.com/ucasd.org/unblockedgames57/home" },
-        { "name": "Unblocked Games 76", "url": "https://c-incognito.com/what-is-unblocked-games-76/" },
-        { "name": "Doctoraux Games", "url": "https://doctoraux-com.mutawakkil.com/" },
-        { "name": "Math is fun", "url": "https://www.mathsisfun.com/games/checkers-2.html" },
-        { "name": "Hooda math 3", "url": "https://www.hoodamath.com/games/papaspizzeria.html#gsc.tab=0" },
-        { "name": "Best Unblocked Games", "url": "https://scratch.mit.edu/studios/28838132" },
-        { "name": "For School Srach games", "url": "https://scratch.mit.edu/studios/28838132" },
-        { "name": "Unblocked Games 66", "url": "https://sites.google.com/site/unblockedgames66fun/home" },
-        { "name": "Classic Minecraft", "url": "https://classic.minecraft.net/" },
-        { "name": "IQ test", "url": "https://iqtest.com/" },
-        { "name": "Abcya", "url": "https://www.abcya.com/" },
-        { "name": "Play Tanks 2", "url": "https://www.mathsisfun.com/games/tanks2.html" },
-        { "name": "Gd Game", "url": "https://gdgame.fun/P/homeIndex" },
-        { "name": "Primary Games", "url": "https://www.primarygames.co.uk/" },
-        { "name": "Web GL simulation", "url": "https://paveldogreat.github.io/WebGL-Fluid-Simulation/" },
-        { "name": "Math PlayGround", "url": "https://www.mathplayground.com/logic-games.html" },
-        { "name": "InterLand", "url": "https://beinternetawesome.withgoogle.com/en_us/interland/" },
-        { "name": "Cut the Rope", "url": "https://www.experimonkey.com/games/html5-games/cut-the-rope/" },
-        { "name": "Snake Games", "url": "https://www.google.com/search?q=google+snake+game&amp;safe=active&amp;ssui=on" },
-        { "name": "DinoSaur Games", "url": "https://shawneestatechronicle.com/games/dinosaur-game/" },
-        { "name": "Tank Game", "url": "https://www.mathsisfun.com/games/tanks2.html" },
-        { "name": "MineCraft", "url": "https://classic.minecraft.net/?join=XTyI5AXiBXOnRyoH" },
-        { "name": "Temple Run 2", "url": "https://jimwise76.github.io/timstu/temple-run-2/" },
-        { "name": "Conway game of life", "url": "https://playgameoflife.com/" },
-        { "name": "CONNIE", "url": "https://playgameoflife.com/" },
-        { "name": "Slope", "url": "https://jimwise76.github.io/timstu/slope/" },
-        { "name": "Geometry Dash", "url": "https://jimwise76.github.io/timstu/geodash/" },
-        { "name": "Drive Mad", "url": "https://jimwise76.github.io/timstu/drive-mad/" },
-        { "name": "Tunnel Rush", "url": "https://jimwise76.github.io/timstu/tunnel-rush/" },
-        { "name": "Neal Fun", "url": "https://neal-fun.org/" },
-        { "name": "Cookie Clicker", "url": "https://history-archive.vercel.app/games.html#cookie_clicker" },
-        { "name": "Tumble Together", "url": "https://tumble-together.herokuapp.com/?code=-C1C0CKKKKKI0AH1BI0AH1BK_II0G2A6A7A4A8A&amp;id=3" },
-        { "name": "Google Pani Puri", "url": "https://doodles.google/doodle/celebrating-pani-puri/" },
-        { "name": "Chess", "url": "https://www.chess.com/" },
-        { "name": "Flappy Bird", "url": "https://flappycreator.com/flappy.php?id=5f3c49bc07f94" },
-        { "name": "Hacker Typer", "url": "https://hackertyper.net/" },
-        { "name": "3 Days till Mario steals your life", "url": "https://openprocessing.org/sketch/1209711/" },
-        { "name": "a1r games", "url": "https://a1rplayis.us/games" },
-        { "name": "Pug in a rug", "url": "https://puginarug.com/" },
-        { "name": "Neo Luo's game", "url": "https://scratch.mit.edu/projects/939123151/" },
-        { "name": "Proxy", "url": "https://rrisd.internet.filters.rugeleychessclub.co.uk/" },
-        { "name": "Classroom 6x", "url": "https://sites.google.com/site/classroom6x/unblockedgames" },
-        { "name": "PortaPortal", "url": "https://guest.portaportal.com/foreverhappy" },
-        { "name": "MineCraft WORKS", "url": "https://eaglymc.com/web-javascript/" },
-        { "name": "Algebra Nexus", "url": "https://algebra.learnnexus.xyz/"}
-    ];
-
-    const container = document.getElementById("games"); // Make sure the correct ID is used
-    if (!container) {
-        console.error("Error: Element with ID 'games' not found.");
-        return;
+:root {
+       --container-background-color: #8B0000;
+      --background-color: #ffcccc;
+      --text-color: #660000;
+      --selection-color-background: #660000;
+      --selection-color: #ffcccc;
+      --button-border-radius: 8px;
+      --input-border-radius: 6px;
+      --link-color: #9ee90;
+      --scroll-bar-background: #bd45459a;
+      --scroll-bar: #121212;
+      --scroll-bar-hover: #bd45459a;
+      --button: green;
+     --text-box-color: #ffcccc; 
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #ccc;
+     border-radius: 10px;
     }
 
-    const list = document.createElement("div");
-    list.classList.add("game-links");
+ .theme-buttons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
 
-    links.forEach(link => {
-        const div = document.createElement("div");
-        div.className = "list-item";
+        .theme-buttons button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+  
+  .dropdown {
+      margin: 20px;
+      padding: 10px;
+      font-size: 1rem;
+    }
+  
+  .button1 {
+    padding: 12px 25px;
+      background-color: var(--button-background-color);
+      color: white;
+      border: none;
+      border-radius: var(--button-border-radius);
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+  }
 
-        const a = document.createElement("a");
-        a.href = link.url;
-        a.textContent = link.name;
-        a.target = "_blank";
 
-        div.appendChild(a);
-        list.appendChild(div);
-    });
+         /* Light Themes */
+    [data-theme="red"] {
+      --background-color: #ffcccc;
+      --text-color: white;
+      --selection-color-background: #660000;
+      --selection-color: #ffcccc;
+       --container-background-color: #8B0000;
+      --hoverColor: 2px 2px 8px #FF0000;
+      --text-box-color: #ffcccc; 
+    }
 
-    container.appendChild(list);
-    console.log("Links added successfully!");
-});
+    [data-theme="orange"] {
+      --background-color: #ffe5cc;
+      --text-color: white;
+      --selection-color-background: #994c00;
+       --selection-color: #ffe5cc;
+       --container-background-color: #ff8c00;
+      --hoverColor: 2px 2px 8px #ffc00;
+      --text-box-color: #ffe5cc;
+    }
+
+    [data-theme="yellow"] {
+      --background-color: #ffffcc;
+      --text-color: white;
+      --selection-color-background: #666600;
+       --selection-color: #ffffcc;
+       --container-background-color: #AA6C39;
+      --hoverColor: 2px 2px 8px #AA6C39;
+      --text-box-color: #ffffcc; 
+    }
+
+    [data-theme="green"] {
+      --background-color: #ccffcc;
+      --text-color: white;
+      --selection-color-background: #006600;
+       --selection-color: #ccffcc;
+       --container-background-color: #06402B;
+      --hoverColor: 2px 2px 8px #06402B;
+      --text-box-color: #ccffcc;
+    }
+
+    [data-theme="blue"] {
+      --background-color: #cce5ff;
+      --text-color: white;
+      --selection-color-background: #003366;
+       --selection-color: #cce5ff;
+       --container-background-color: #00008B;
+      --hoverColor: 2px 2px 8px #00008B;
+      --text-box-color: #cce5ff;
+    }
+
+    [data-theme="purple"] {
+      --background-color: #e5ccff;
+      --text-color: white;
+      --selection-color-background: #4b0082;
+       --selection-color: #e5ccff;
+       --container-background-color: #301934;
+            --hoverColor: 2px 2px 8px #301934;
+        --text-box-color: #e5ccff;
+    }
+
+    [data-theme="brown"] {
+      --background-color: #f2e6d9;
+      --text-color: white;
+      --selection-color-background: #663300;
+       --selection-color: #f2e6d9;
+       --container-background-color: #5C4033;
+      --hoverColor: 2px 2px 8px #5C4033;
+      --text-box-color: #f2e6d9;
+    }
+
+    /* Dark Themes */
+    [data-theme="red-dark"] {
+      --background-color: #4d0000;
+      --text-color: white;
+      --selection-color-background: #ffb3b3;
+       --selection-color: #4d0000;
+       --container-background-color: #1e1e1e;
+       --hoverColor: 2px 2px 8px #1e1e1e;
+              --text-box-color: #ffcccc; 
+
+
+    }
+
+    [data-theme="orange-dark"] {
+      --background-color: #4c1a00;
+      --text-color: white;
+      --selection-color-background: #ffcc99;
+       --selection-color: #4c1a00;
+       --container-background-color: #1e1e1e;
+       --hoverColor: 2px 2px 8px #1e1e1e;
+              --text-box-color: #ffe5cc;
+
+    }
+
+    [data-theme="yellow-dark"] {
+      --background-color: #4d4d00;
+      --text-color: white;
+      --selection-color-background: #ffff99;
+       --selection-color: #4d4d00;
+       --container-background-color: #1e1e1e;
+       --hoverColor: 2px 2px 8px #1e1e1e;
+    --text-box-color: #ffffcc; 
+    }
+
+    [data-theme="green-dark"] {
+      --background-color: #003300;
+      --text-color: white;
+      --selection-color-background: #b3ffb3;
+       --selection-color: #003300;
+       --container-background-color: #1e1e1e;
+       --hoverColor: 2px 2px 8px #1e1e1e;
+     --text-box-color: #ccffcc;
+    }
+
+    [data-theme="blue-dark"] {
+      --background-color: #001a4d;
+      --text-color: white;
+      --selection-color-background: #99ccff;
+       --selection-color: #001a4d;
+       --container-background-color: #1e1e1e;
+       --hoverColor: 2px 2px 8px #1e1e1e;
+     --text-box-color: #cce5ff;
+    }
+
+    [data-theme="purple-dark"] {
+      --background-color: #2d004d;
+      --text-color: white;
+      --selection-color-background: #dab3ff;
+       --selection-color: #2d004d;
+       --container-background-color: #1e1e1e;
+       --hoverColor: 2px 2px 8px #1e1e1e;
+       --text-box-color: #e5ccff;
+    }
+
+    [data-theme="brown-dark"] {
+      --background-color: #331a00;
+      --text-color: white;
+       --selection-color-background:  #e6ccb3;
+       --selection-color: #331a00;
+       --container-background-color: #1e1e1e;
+       --hoverColor: 2px 2px 8px #1e1e1e;
+        --text-box-color: #f2e6d9;
+    }
+  .theme-button, .dark-mode-toggle {
+      margin: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #ddd;
+      transition: background-color 0.3s ease;
+    }
+
+    .theme-button:hover, .dark-mode-toggle:hover {
+      background-color: #bbb;
+    }
+
+
+    body {
+      font-family: 'Work Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      text-align: center;
+      box-sizing: border-box;
+      line-height: 1.6;
+      transition: all 0.3s ease;
+    }
+
+    ::selection {
+      background-color: var(--selection-color-background);
+      color: var(--selection-color);
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 100px auto;
+      padding: 40px;
+      background-color: var(--container-background-color);
+      text-align: center;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+      transform: scale(1.05);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      color: var(--text-color);
+    }
+
+    .password-input {
+      width: calc(100% - 20px);
+      padding: 15px;
+      margin-bottom: 30px;
+      border: 1px solid #ccc;
+      border-radius: var(--input-border-radius);
+      background-color: var(--container-background-color);
+      color: var(--text-box-color);
+      font-size: 1rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .password-input:focus {
+      border-color: var(--background-color);
+      outline: none;
+    }
+
+    .button {
+      padding: 12px 25px;
+      background-color: var(--button-background-color);
+      color: var(--text-color);
+      border: none;
+      border-radius: var(--button-border-radius);
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: var(--button-hover-background-color);
+      transform: scale(1.1);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .content {
+      margin: 20px;
+      padding: 20px;
+      background-color: var(--container-background-color);
+      border-radius: 12px;
+      transition: opacity 0.5s ease;
+    }
+
+    .mode-toggle {
+      margin: 20px;
+      padding: 12px 20px;
+      background-color: var(--button-background-color);
+      border: none;
+      border-radius: var(--button-border-radius);
+      cursor: pointer;
+      font-size: 1.1rem;
+      color: var(--text-color);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .mode-toggle:hover {
+      background-color: var(--button-hover-background-color);
+      transform: scale(1.1);
+    }
+  
+  .color {
+    color: white;
+      font-size: 40px;
+      font-weight: bold;
+  }
+
+  .color2 {
+    color: white;
+    font-size: 15px;
+  }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: var(--background-color);
+      transition: all 0.3s ease;
+      border-radius: 10px;
+    }
+
+nav1 ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: var(--background-color);
+      transition: all 0.3s ease;
+      border-radius: 10px;
+    }
+
+    nav ul li {
+      margin: 0;
+      padding: 10px;
+    }
+
+nav1 ul li {
+      margin: 0;
+      padding: 10px;
+    }
+
+    nav ul li button {
+      padding: 15px 25px;
+      background: none;
+      color: var(--text-color);
+      border: 2px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+
+nav1 ul li button {
+      padding: 15px 25px;
+      background: none;
+      color: var(--text-color);
+      border: 2px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+    h1 {
+      color: var(--text-color);
+}
+
+    nav ul li button:hover {
+      background-color: var(--button-hover-background-color);
+      transform: scale(1.05);
+    }
+
+nav1 ul li button:hover {
+      background-color: var(--button-hover-background-color);
+      transform: scale(1.05);
+    }
+/* Hide all sections by default */
+section {
+  display: none;
+}
+
+/* Show the active section */
+section.active {
+  display: block;
+}
+
+
+
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px;
+      }
+
+      h2 {
+        font-size: 2rem;
+        color: var(--text-color);
+      }
+
+      .password-input, .button {
+        font-size: 1rem;
+      }
+
+      .mode-toggle {
+        padding: 10px 15px;
+      }
+
+      
+
+       nav1 ul {
+        flex-direction: column;
+      }
+      nav ul li {
+        width: 100%;
+      }
+      
+      nav1 ul li {
+        width: 100%;
+      }
+
+      nav ul li button {
+        width: 100%;
+        padding: 15px 0;
+      }
+      
+      nav1 ul li button {
+        width: 100%;
+        padding: 15px 0;
+      }
+    
+      section1 {
+            display: none;
+        }
+        .active1 {
+            display: block;
+        }
+  a:link, a:visited {
+  color: var(--link-color);
+  background-color: transparent;
+  text-decoration: underline;
+  }
+
+  a:hover {
+  color: var(--link-color);
+  background-color: transparent;
+  text-decoration: underline;
+    text-shadow: var(--hoverColor)
+  }
+
+  a:active {
+  color: var(--link-color);
+  background-color: transparent;
+  text-decoration: underline;
+
+  
+    }
+    
+    
+     ::-webkit-scrollbar {
+      width: 12px; 
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--container-background-color); 
+      border-radius: 10px; 
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--text-color); 
+      border-radius: 10px; 
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--background); 
+    }
+    
+      .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown button */
+        .dropdown-btn {
+            background-color: var(--button);
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+          border-radius: var(--input-border-radius);
+          
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+         
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Dropdown links (buttons styled as dropdown options) */
+        .dropdown-content button {
+            background-color: white;
+            color: black;
+            padding: 12px 16px;
+            border: none;
+            text-align: left;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        /* Show dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Change background color on hover */
+        .dropdown-content button:hover {
+            background-color: #ddd;
+        }
