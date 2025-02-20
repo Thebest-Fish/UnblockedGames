@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
 });
 
 
-const storedHashedPassword = bcrypt.hashSync("game123", 10);  
+const storedHashedPassword = bcrypt.hashSync("games123", 10);  
 
 // ✅ API route to check password
 app.post("/check-password", (req, res) => {
