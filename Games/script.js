@@ -21,16 +21,12 @@ If you wish to use any part of this website, please contact 96654@psdschools.org
 
 function showTab(tabId) {
     // Hide all sections
-    const sections = document.querySelectorAll('main section');
-    sections.forEach(section => {
-        section.classList.remove('active');
+    document.querySelectorAll("section").forEach(section => {
+        section.classList.remove("active");
     });
 
-    // Show the selected tab
-    const targetSection = document.getElementById(tabId);
-    if (targetSection) {
-        targetSection.classList.add('active');
-    }
+    // Show the selected section
+    document.getElementById(tabId).classList.add("active");
 }
 
 
